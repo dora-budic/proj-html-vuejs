@@ -14,8 +14,13 @@ body {
   display: flex;
 }
 
+.title-size {
+  font-size: 50px;
+  font-weight: 900;
+}
+
 header .navbar-top {
-  background-color: #4e4f52;
+  background-color: #1d2528;
   height: 50px;
   display: flex;
   align-items: center;
@@ -27,6 +32,7 @@ header .navbar-top .contacts {
   color: #bcbdbd;
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 header .navbar-top .contacts .contacts-left a {
   text-decoration: none;
@@ -175,4 +181,29 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 .jumbtron .overlay .slider-icons span.active, .jumbtron .overlay .slider-icons span:hover {
   background-color: #048383;
+}
+
+#video {
+  padding: 100px 0;
+}
+#video .container .video-text {
+  text-align: center;
+}
+#video .container .video-text > span {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #048383;
+  font-weight: bold;
+}
+#video .container .video-text > h1 {
+  margin: 30px 0;
+}
+#video .container .video-text > h1 span:first-child {
+  color: #1d2528;
+}
+#video .container .video-text > h1 span:last-child {
+  color: #048383;
+  background-color: #e7eee9;
+  padding: 10px;
+  border-radius: 3px;
 }
