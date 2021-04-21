@@ -15,9 +15,20 @@
   background-repeat: no-repeat;
 }
 
-@mixin btn-green($background,$color) {
-  background-color: $background;
-  color: $color;
+@mixin btn-green {
+  background-color: $bg-green;
+  color: $white;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+@mixin btn-transparent {
+  color: $white;
+  border: 1px solid $bg-green;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@mixin position-center {
+
 }

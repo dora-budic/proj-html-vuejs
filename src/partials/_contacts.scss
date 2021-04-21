@@ -7,7 +7,7 @@ header {
 
     .contacts {
       @include container-center;
-      color: $lightgrey;
+      color: $lightGrey;
       display: flex;
       justify-content: space-between;
 
@@ -16,7 +16,7 @@ header {
           li {
             margin-left: 20px;
             a {
-              @include a-style($lightgrey);
+              @include a-style($lightGrey);
               i {
                 margin-right: 5px;
               }
