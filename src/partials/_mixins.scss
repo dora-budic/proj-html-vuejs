@@ -14,3 +14,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@mixin btn-green($background,$color) {
+  background-color: $background;
+  color: $color;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

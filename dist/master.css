@@ -16,7 +16,7 @@ body {
 
 header .navbar-top {
   background-color: #4e4f52;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
 }
@@ -45,4 +45,20 @@ header .navbar-top .contacts .contacts-right ul li a i {
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
+  padding-top: 30px;
+}
+.jumbtron .navbar-bottom ul li {
+  margin-left: 20px;
+}
+.jumbtron .navbar-bottom ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.jumbtron .navbar-bottom ul li:last-child {
+  background-color: #048383;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
 }

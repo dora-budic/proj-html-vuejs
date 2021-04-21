@@ -2,4 +2,22 @@
   background-image: url('./img/bg-2.jpg');
   @include bg-image(top);
   height: 600px;
+  padding-top: 30px;
+
+  .navbar-bottom {
+    ul {
+      li {
+        margin-left: 20px;
+        a {
+          @include a-style($white);
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          @include btn-green($blueLagoon,$white);
+        }
+      }
+    }
+  }
 }

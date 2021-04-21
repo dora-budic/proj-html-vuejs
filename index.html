@@ -22,11 +22,7 @@
             </div>
             <div class="contacts-right">
               <ul class="list-inline">
-                <li><a href="#"><i class="fas fa-phone-alt"></i>+1 (305) 1234-5678</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i>hello@example.com</a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li v-for="contact in contacts"><a href="#"><i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>{{contact.text}}</a></li>
               </ul>
             </div>
           </div>
@@ -34,7 +30,11 @@
 
         <div class="jumbtron">
           <div class="navbar-bottom">
-
+            <ul class="list-inline">
+              <li v-for="link in navLinks"><a href="#">{{link}}</a></li>
+              <li><a href="#"><i class="far fa-user"></i></a></li>
+              <li><a href="#">get in touch</a></li>
+            </ul>
           </div>
         </div>
       </header>
