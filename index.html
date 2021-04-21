@@ -17,38 +17,38 @@
         <div class="navbar-top">
           <div class="contacts">
             <div class="contacts-left">
-              <i class="fas fa-clock"></i>
-              <span>Open Hours: Mon - Sat - 9:00 - 18:00</span>
+              <a href="#"><i class="fas fa-clock"></i>Open Hours: Mon - Sat - 9:00 - 18:00</a>
             </div>
             <div class="contacts-right">
               <ul class="list-inline">
-                <li v-for="contact in contacts"><a href="#"><i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>{{contact.text}}</a></li>
+                <li v-for="contact in contacts"><a :href="contact.url"><i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>{{contact.text}}</a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="jumbtron">
+        <div class="jumbtron"
+        :style="`background-image:url('./dist/img/${jumbtron[currentIndex].img}')`">
           <div class="overlay">
             <div class="navbar-bottom">
               <img src="./dist/img/logo.svg" alt="nexgen logo">
               <ul class="list-inline">
-                <li v-for="link in navLinks"><a href="#"><i :class="link.icon"
+                <li v-for="link in navLinks"><a :href="link.url"><i :class="link.icon"
                   v-if="link.icon != ''"></i>{{getName(link)}}</a></li>
               </ul>
             </div>
             <div class="jumbtron-text">
-              <h1>Financial Risk</h1>
-              <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
+              <h1>{{jumbtron[currentIndex].title}}</h1>
+              <p>{{jumbtron[currentIndex].description}}</p>
               <ul class="list-inline">
                 <li><a href="#">Get in touch</a></li>
                 <li><a href="#">Read more</a></li>
               </ul>
             </div>
             <div class="slider-icons">
-              <span></span>
-              <span class="active"></span>
-              <span></span>
+              <span v-for="icon in jumbtron.length"
+                :class="(icon - 1 == currentIndex) ? 'active' : ''"
+                @click="changeJumbo(icon-1)"></span>
             </div>
           </div>
         </div>

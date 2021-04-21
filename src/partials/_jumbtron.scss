@@ -1,8 +1,8 @@
 .jumbtron {
-  background-image: url('./img/bg-2.jpg');
   @include bg-image(top);
-  height: 600px;
+  height: 630px;
   position: relative;
+  transition: all 0.8s linear;
 
   .overlay {
     width: 100%;
@@ -10,7 +10,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     padding-top: 30px;
 
     .navbar-bottom {
@@ -31,12 +31,19 @@
           a {
             @include a-style($white);
             font-weight: 500;
+            &:hover {
+              color: $bg-green;
+            }
           }
 
           &:last-child {
             @include btn-green;
             &:hover {
               background-color: $btn-hover;
+              color: $white;
+            }
+            a:hover {
+              color: $white;
             }
           }
         }
@@ -106,8 +113,9 @@
         padding: 4px;
         border-radius: 10px;
         margin-bottom: 10px;
+        cursor: pointer;
 
-        &.active {
+        &.active, &:hover {
           background-color: $bg-green;
         }
       }

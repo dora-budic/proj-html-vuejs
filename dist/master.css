@@ -28,6 +28,16 @@ header .navbar-top .contacts {
   display: flex;
   justify-content: space-between;
 }
+header .navbar-top .contacts .contacts-left a {
+  text-decoration: none;
+  color: #bcbdbd;
+}
+header .navbar-top .contacts .contacts-left a i {
+  margin-right: 5px;
+}
+header .navbar-top .contacts .contacts-left a:hover {
+  color: #048383;
+}
 header .navbar-top .contacts .contacts-right ul li {
   margin-left: 20px;
 }
@@ -38,14 +48,17 @@ header .navbar-top .contacts .contacts-right ul li a {
 header .navbar-top .contacts .contacts-right ul li a i {
   margin-right: 5px;
 }
+header .navbar-top .contacts .contacts-right ul li a:hover {
+  color: #048383;
+}
 
 .jumbtron {
-  background-image: url("./img/bg-2.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 630px;
   position: relative;
+  transition: all 0.8s linear;
 }
 .jumbtron .overlay {
   width: 100%;
@@ -53,7 +66,7 @@ header .navbar-top .contacts .contacts-right ul li a i {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   padding-top: 30px;
 }
 .jumbtron .overlay .navbar-bottom {
@@ -79,6 +92,9 @@ header .navbar-top .contacts .contacts-right ul li a i {
   color: #ffffff;
   font-weight: 500;
 }
+.jumbtron .overlay .navbar-bottom ul li a:hover {
+  color: #048383;
+}
 .jumbtron .overlay .navbar-bottom ul li:last-child {
   background-color: #048383;
   color: #ffffff;
@@ -87,6 +103,10 @@ header .navbar-top .contacts .contacts-right ul li a i {
 }
 .jumbtron .overlay .navbar-bottom ul li:last-child:hover {
   background-color: #52babb;
+  color: #ffffff;
+}
+.jumbtron .overlay .navbar-bottom ul li:last-child a:hover {
+  color: #ffffff;
 }
 .jumbtron .overlay .jumbtron-text {
   width: 50%;
@@ -151,7 +171,8 @@ header .navbar-top .contacts .contacts-right ul li a i {
   padding: 4px;
   border-radius: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
-.jumbtron .overlay .slider-icons span.active {
+.jumbtron .overlay .slider-icons span.active, .jumbtron .overlay .slider-icons span:hover {
   background-color: #048383;
 }

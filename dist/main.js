@@ -15,50 +15,87 @@ var app = new Vue({
       family: 'fas',
       prefix: 'fa-',
       type: 'phone-alt',
-      text: '+1 (305) 1234-5678'
+      text: '+1 (305) 1234-5678',
+      url: '#'
     }, {
       family: 'fas',
       prefix: 'fa-',
       type: 'envelope',
-      text: 'hello@example.com'
+      text: 'hello@example.com',
+      url: '#'
     }, {
       family: 'fab',
       prefix: 'fa-',
       type: 'facebook-f',
-      text: ''
+      text: '',
+      url: '#'
     }, {
       family: 'fab',
       prefix: 'fa-',
       type: 'twitter',
-      text: ''
+      text: '',
+      url: '#'
     }, {
       family: 'fab',
       prefix: 'fa-',
       type: 'linkedin-in',
-      text: ''
+      text: '',
+      url: '#'
     }],
     navLinks: [{
       name: 'home',
-      icon: ''
+      icon: '',
+      url: '#'
     }, {
       name: 'about',
-      icon: ''
+      icon: '',
+      url: '#'
     }, {
       name: 'services',
-      icon: ''
+      icon: '',
+      url: '#'
     }, {
       name: 'team',
-      icon: ''
+      icon: '',
+      url: '#'
     }, {
       name: 'blog',
-      icon: ''
+      icon: '',
+      url: '#'
     }, {
       name: 'profile',
-      icon: 'far fa-user'
+      icon: 'far fa-user',
+      url: '#'
     }, {
       name: 'get in touch',
-      icon: ''
-    }]
+      icon: '',
+      url: '#'
+    }],
+    jumbtron: [{
+      img: 'bg-1.jpg',
+      title: 'Business Consulting',
+      description: 'We drive product and service innovation, improve financial performance, accelerate market speed.'
+    }, {
+      img: 'bg-2.jpg',
+      title: 'Financial Risk',
+      description: 'The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.'
+    }, {
+      img: 'bg-3.jpg',
+      title: 'Audit & Assurance',
+      description: 'Our focus is to map the technologies to solve the business transformation, offering services.'
+    }],
+    currentIndex: 0
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    setInterval(function () {
+      if (_this.currentIndex < _this.jumbtron.length - 1) {
+        _this.currentIndex++;
+      } else {
+        _this.currentIndex = 0;
+      }
+    }, 10000);
   },
   methods: {
     getName: function getName(object) {
@@ -67,6 +104,9 @@ var app = new Vue({
       } else {
         return object.name;
       }
+    },
+    changeJumbo: function changeJumbo(index) {
+      this.currentIndex = index;
     }
   }
 });
