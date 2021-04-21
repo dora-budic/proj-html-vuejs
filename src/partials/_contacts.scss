@@ -1,0 +1,29 @@
+header {
+  .navbar-top {
+    background-color: $nav-bg;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .contacts {
+      @include container-center;
+      color: $lightgrey;
+      display: flex;
+      justify-content: space-between;
+
+      .contacts-right {
+        ul {
+          li {
+            margin-left: 20px;
+            a {
+              @include a-style($lightgrey);
+              i {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

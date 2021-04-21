@@ -1,0 +1,16 @@
+@mixin container-center {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin a-style($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin bg-image($position) {
+  background-position: $position;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

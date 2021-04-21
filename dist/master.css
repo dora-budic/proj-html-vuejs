@@ -1,1 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.list-inline {
+  list-style: none;
+  display: flex;
+}
+
+header .navbar-top {
+  background-color: #4e4f52;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+header .navbar-top .contacts {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #bcbdbd;
+  display: flex;
+  justify-content: space-between;
+}
+header .navbar-top .contacts .contacts-right ul li {
+  margin-left: 20px;
+}
+header .navbar-top .contacts .contacts-right ul li a {
+  text-decoration: none;
+  color: #bcbdbd;
+}
+header .navbar-top .contacts .contacts-right ul li a i {
+  margin-right: 5px;
+}
+
+.jumbtron {
+  background-image: url("./img/bg-2.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+}

@@ -1,0 +1,5 @@
+.jumbtron {
+  background-image: url('./img/bg-2.jpg');
+  @include bg-image(top);
+  height: 600px;
+}
