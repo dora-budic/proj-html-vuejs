@@ -357,17 +357,38 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #111117;
   border-radius: 5px;
   padding: 40px 30px;
+  cursor: pointer;
   position: relative;
 }
-#services .container .card-container .card i.fa-arrow-right {
+#services .container .card-container .card:hover {
+  position: relative;
+  transform: translatey(-10px);
+}
+#services .container .card-container .card:hover div.circle {
+  background-color: #048383;
+}
+#services .container .card-container .card:hover div.circle i.fa-arrow-right {
+  color: #ffffff;
+}
+#services .container .card-container .card:hover .card-text i {
+  color: #ffffff;
+}
+#services .container .card-container .card div.circle {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
   position: absolute;
-  right: 30px;
   top: 30px;
+  right: 30px;
+}
+#services .container .card-container .card div.circle i.fa-arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(4, 131, 131, 0.5);
   font-size: 18px;
-}
-#services .container .card-container .card i.fa-arrow-right:hover {
-  color: #ffffff;
 }
 #services .container .card-container .card .card-text p.subtitle {
   margin: 20px 0;

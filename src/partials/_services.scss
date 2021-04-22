@@ -39,17 +39,40 @@
         background-color: $overlay-bg;
         border-radius: 5px;
         padding: 40px 30px;
+        cursor: pointer;
         position: relative;
 
-        i.fa-arrow-right {
-          position: absolute;
-          right: 30px;
-          top: 30px;
-          color: rgba(4,131,131,0.5);
-          font-size: 18px;
+        &:hover {
+          position: relative;
+          transform: translatey(-10px);
 
-          &:hover {
-            color:$white;
+          div.circle {
+            background-color: $darkGreen;
+            i.fa-arrow-right {
+              color:$white;
+            }
+          }
+
+          .card-text {
+            i {
+              color: $white;
+            }
+          }
+        }
+
+        div.circle {
+          width: 30px;
+          height: 30px;
+          background-color: transparent;
+          border-radius: 50%;
+          position: absolute;
+          top: 30px;
+          right: 30px;
+
+          i.fa-arrow-right {
+            @include position-center;
+            color: rgba(4,131,131,0.5);
+            font-size: 18px;
           }
         }
 
