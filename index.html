@@ -214,7 +214,21 @@
                 <a href="#">see all</a>
               </div>
             </div>
-
+            <div class="card-container">
+              <div class="card" v-for="article in articles">
+                <img :src="`./dist/img/${article.img}`" :alt="article.author">
+                <div class="card-text">
+                  <div class="card-top">
+                    <span><i class="far fa-user"></i>{{article.author}}</span>
+                    <span><i class="fas fa-clock"></i>{{article.time}}</span>
+                  </div>
+                  <div class="card-bottom">
+                    <p class="subtitle">{{article.title}}</p>
+                    <p class="bottom">{{article.about}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
