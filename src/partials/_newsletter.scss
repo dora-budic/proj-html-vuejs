@@ -1,0 +1,47 @@
+#newsletter {
+  background-color: $black;
+
+  .container {
+    @include container-center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+
+    .container-left {
+      width: calc(100% / 2 - 10px);
+      .newsletter-text {
+        h1 {
+          color: $white;
+          span:first-child {
+            @include title-bg($white);
+          }
+        }
+      }
+    }
+
+    .container-right {
+      width: calc(100% / 2 - 10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      input {
+        outline: 0;
+        background-color: $darkGrey;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+      }
+
+      a {
+        @include a-style($white);
+        @include btn-green;
+
+        &:hover {
+          background-color: $lightGreen;
+        }
+      }
+    }
+  }
+}

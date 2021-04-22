@@ -572,3 +572,54 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #news .container .card-container .card:hover .card-text .card-bottom p.bottom {
   display: block;
 }
+
+#newsletter {
+  background-color: #000000;
+}
+#newsletter .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+#newsletter .container .container-left {
+  width: calc(100% / 2 - 10px);
+}
+#newsletter .container .container-left .newsletter-text h1 {
+  color: #ffffff;
+}
+#newsletter .container .container-left .newsletter-text h1 span:first-child {
+  color: #ffffff;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#newsletter .container .container-right {
+  width: calc(100% / 2 - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#newsletter .container .container-right input {
+  outline: 0;
+  background-color: #1d2528;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+#newsletter .container .container-right a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #048383;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#newsletter .container .container-right a:hover {
+  background-color: #52babb;
+}
