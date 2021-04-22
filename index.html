@@ -161,6 +161,47 @@
             </div>
           </div>
         </section>
+
+        <section id="team" class="py-100">
+          <div class="container">
+            <div class="container-left">
+              <div class="team-text">
+                <span class="section-intro">we like what we do</span>
+                <h1 class="title-style">
+                  <span>Team</span>
+                  <span>of Experts</span>
+                </h1>
+                <p class="p-font">Ethics and integrity are the bases on which our professionals build their careers.
+                They are fundamentals that become daily attitudes.</p>
+              </div>
+              <div class="team-members">
+                <div class="team-member" v-for="expert in experts">
+                  <div class="image">
+                    <img :src="`./dist/img/${expert.img}`" :alt="expert.name">
+                  </div>
+                  <div class="member-info">
+                    <p class="subtitle">{{expert.name}}</p>
+                    <p class="position">{{expert.position}}</p>
+                    <ul class="list-inline">
+                      <li><a :href="expert.facebook"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a :href="expert.twitter"><i class="fab fa-twitter"></i></a></li>
+                      <li><a :href="expert.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-right">
+              <h3>President Speech</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Praesent ut lacinia diam.</p>
+              <p>Vivamus efficitur et est quis posuere. Nulla sollicitudin vulputate dui, id pretium tortor congue eu. Integer aliquet justo eu quam volutpat ullamcorper.</p>
+              <p>Duis ut hendrerit mauris. Phasellus faucibus ut enim vel tincidunt. Nunc venenatis a dui et laoreet.</p>
+              <h4>T.Johnson<i class="fas fa-quote-right"></i></h4>
+
+            </div>
+
+          </div>
+        </section>
       </main>
 
       <footer>

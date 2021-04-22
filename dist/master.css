@@ -347,7 +347,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 40px;
+  margin: 40px -10px 0;
 }
 #services .container .card-container .card {
   width: calc(100% / 3 - 20px);
@@ -373,4 +373,96 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #services .container .card-container .card .card-text i {
   color: #048383;
   font-size: 30px;
+}
+
+#team .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+#team .container .container-left {
+  width: calc(100% / 3 * 2);
+}
+#team .container .container-left .team-text h1 span:first-child {
+  color: #048383;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#team .container .container-left .team-text h1 span:last-child {
+  color: #1d2528;
+}
+#team .container .container-left .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+#team .container .container-left .team-members .team-member {
+  width: calc(100%/2 - 20px);
+  display: flex;
+  align-items: center;
+  margin: 0 10px 30px;
+}
+#team .container .container-left .team-members .team-member .image {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+#team .container .container-left .team-members .team-member .image img {
+  width: 100px;
+}
+#team .container .container-left .team-members .team-member .member-info {
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#team .container .container-left .team-members .team-member .member-info p.subtitle {
+  color: #1d2528;
+}
+#team .container .container-left .team-members .team-member .member-info p.position {
+  text-transform: uppercase;
+  color: #bcbdbd;
+  font-size: 14px;
+  font-weight: 500;
+}
+#team .container .container-left .team-members .team-member .member-info ul li {
+  margin-right: 5px;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#team .container .container-left .team-members .team-member .member-info ul li a {
+  text-decoration: none;
+  color: #048383;
+  display: flex;
+}
+#team .container .container-right {
+  width: calc(100% / 3 - 10px);
+  background-color: #048383;
+  padding: 30px 20px;
+  margin: 50px 0 30px 10px;
+  border-radius: 5px;
+}
+#team .container .container-right h3 {
+  color: #ffffff;
+}
+#team .container .container-right p {
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+#team .container .container-right h4 {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+}
+#team .container .container-right h4 i {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.3);
 }

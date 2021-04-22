@@ -1,0 +1,101 @@
+#team {
+  .container {
+    @include container-center;
+    display: flex;
+
+    .container-left {
+      width: calc(100% / 3 * 2);
+
+      .team-text {
+        h1 {
+          span:first-child {
+            @include title-bg($darkGreen);
+          }
+          span:last-child {
+            color: $darkGrey;
+          }
+        }
+      }
+
+      .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        .team-member {
+          width: calc(100%/2 - 20px);
+          display: flex;
+          align-items: center;
+          margin: 0 10px 30px;
+
+          .image {
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            img {
+              width: 100px;
+            }
+          }
+
+          .member-info {
+            margin-left: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            p.subtitle {
+              color: $darkGrey;
+            }
+            p.position {
+              text-transform: uppercase;
+              color: $lightGrey;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            ul {
+              li {
+                margin-right: 5px;
+                background-color: rgba(4,131,131,0.2);
+                padding: 8px;
+                border-radius: 50%;
+                width: 35px;
+
+                @include display-center;
+                a {
+                  @include a-style($darkGreen);
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container-right {
+      width: calc(100% / 3 - 10px);
+      background-color: $darkGreen;
+      padding: 30px 20px;
+      margin: 50px 0 30px 10px;
+      border-radius: 5px;
+
+      h3 {
+        color: $white;
+      }
+      p {
+        margin: 20px 0;
+        color: rgba(255,255,255,0.8);
+      }
+      h4 {
+        color: rgba(255,255,255,0.8);
+        display: flex;
+        justify-content: space-between;
+        i {
+          font-size: 24px;
+          color: rgba(0,0,0,0.3);
+        }
+      }
+    }
+  }
+}

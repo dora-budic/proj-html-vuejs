@@ -97,6 +97,35 @@ var app = new Vue({
     }, {
       number: 94,
       name: 'Countries Served'
+    }],
+    experts: [{
+      img: 'team-1.jpg',
+      name: 'David Cooper',
+      position: 'cto & co-founder',
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#'
+    }, {
+      img: 'team-3.jpg',
+      name: 'Oliver Jones',
+      position: 'chief procurement',
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#'
+    }, {
+      img: 'team-2.jpg',
+      name: 'Emma Lopez',
+      position: 'chief marketing',
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#'
+    }, {
+      img: 'team-4.jpg',
+      name: 'T.Johnson',
+      position: 'ceo & president',
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#'
     }]
   },
   mounted: function mounted() {
