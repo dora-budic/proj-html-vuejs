@@ -1,0 +1,67 @@
+#services {
+  background-color: $black;
+  .container {
+    @include container-center;
+    .services-text {
+      color: $white;
+      & > h1 {
+        span:last-child {
+          @include title-bg($white);
+        }
+      }
+      .description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          width: 85%;
+        }
+        span {
+          @include btn-transparent;
+          &:hover {
+            background-color: $darkGreen;
+          }
+        }
+      }
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .card {
+        width: calc(100% / 3 - 20px);
+        margin: 0 10px 20px 10px;
+        background-color: $overlay-bg;
+        border-radius: 5px;
+        padding: 40px 30px;
+        position: relative;
+
+        i.fa-arrow-right {
+          position: absolute;
+          right: 30px;
+          top: 30px;
+          color: rgba(4,131,131,0.5);
+          font-size: 18px;
+
+          &:hover {
+            color:$white;
+          }
+        }
+
+        .card-text {
+          p.subtitle {
+            margin: 20px 0;
+          }
+
+          i {
+            color: $darkGreen;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

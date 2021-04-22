@@ -26,6 +26,12 @@ body {
   color: #bcbdbd;
 }
 
+.subtitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .section-intro {
   text-transform: uppercase;
   font-size: 14px;
@@ -119,6 +125,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .jumbtron .navbar-bottom ul li:last-child:hover {
   background-color: #52babb;
@@ -163,14 +171,14 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 .jumbtron .overlay .jumbtron-text ul li a {
   text-decoration: none;
   color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 500;
 }
 .jumbtron .overlay .jumbtron-text ul li:first-child {
   background-color: #048383;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
   margin-right: 15px;
 }
 .jumbtron .overlay .jumbtron-text ul li:first-child:hover {
@@ -181,6 +189,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   border: 1px solid #048383;
   padding: 10px 20px;
   border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .jumbtron .overlay .jumbtron-text ul li:last-child:hover {
   background-color: #048383;
@@ -296,8 +306,71 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-size: 30px;
   margin-bottom: 10px;
 }
-#results .container .stats > div p {
+
+#services {
+  background-color: #000000;
+}
+#services .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#services .container .services-text {
   color: #ffffff;
+}
+#services .container .services-text > h1 span:last-child {
+  color: #ffffff;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#services .container .services-text .description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#services .container .services-text .description p {
+  width: 85%;
+}
+#services .container .services-text .description span {
+  color: #ffffff;
+  border: 1px solid #048383;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#services .container .services-text .description span:hover {
+  background-color: #048383;
+}
+#services .container .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+#services .container .card-container .card {
+  width: calc(100% / 3 - 20px);
+  margin: 0 10px 20px 10px;
+  background-color: #111117;
+  border-radius: 5px;
+  padding: 40px 30px;
+  position: relative;
+}
+#services .container .card-container .card i.fa-arrow-right {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: rgba(4, 131, 131, 0.5);
   font-size: 18px;
-  font-weight: bold;
+}
+#services .container .card-container .card i.fa-arrow-right:hover {
+  color: #ffffff;
+}
+#services .container .card-container .card .card-text p.subtitle {
+  margin: 20px 0;
+}
+#services .container .card-container .card .card-text i {
+  color: #048383;
+  font-size: 30px;
 }

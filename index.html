@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business Consulting</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./dist/master.css">
   </head>
@@ -88,8 +88,76 @@
             <div class="stats">
               <div v-for="stat in statsInfo">
                 <h1>{{stat.number}}</h1>
-                <p>{{stat.name}}</p>
+                <p class="subtitle">{{stat.name}}</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="py-100">
+          <div class="container">
+            <div class="services-text">
+              <span class="section-intro">our business areas</span>
+              <h1 class="title-style">
+                <span>Excellence in</span>
+                <span>Services</span>
+              </h1>
+              <div class="description">
+                <p class="p-font">We are leaders in providing consultancy services with a set of cutting-edge technologies
+                  and a team of experienced and renowned professionals. These are some options that you can hire.</p>
+                <span>see all</span>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="fas fa-sitemap"></i>
+                  <p class="subtitle">Audit &amp; Assurance</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="fas fa-briefcase"></i>
+                  <p class="subtitle">Financial Advisory</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="far fa-chart-bar"></i>
+                  <p class="subtitle">Analytics and M&amp;A</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="fas fa-plane"></i>
+                  <p class="subtitle">Middle Marketing</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="fas fa-globe"></i>
+                  <p class="subtitle">Legal Consulting</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-arrow-right"></i>
+                <div class="card-text">
+                  <i class="fas fa-inbox"></i>
+                  <p class="subtitle">Regulatory Risk</p>
+                  <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>

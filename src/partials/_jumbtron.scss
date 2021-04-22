@@ -75,8 +75,6 @@
         li {
           a {
             @include a-style($white);
-            text-transform: uppercase;
-            font-weight: 500;
           }
 
           &:first-child {
