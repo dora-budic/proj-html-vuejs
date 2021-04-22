@@ -1,32 +1,8 @@
+// POSITIONS
 @mixin container-center {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
-
-@mixin a-style($color) {
-  text-decoration: none;
-  color: $color;
-}
-
-@mixin bg-image($position) {
-  background-position: $position;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-@mixin btn-green {
-  background-color: $darkGreen;
-  color: $white;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-@mixin btn-transparent {
-  color: $white;
-  border: 1px solid $darkGreen;
-  padding: 10px 20px;
-  border-radius: 5px;
 }
 
 @mixin position-center {
@@ -40,4 +16,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// TYPOGRAPHY
+@mixin a-style($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+// BACKGROUND
+@mixin bg-image($position) {
+  background-position: $position;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin title-bg ($color) {
+  color: $color;
+  background-color: rgba(4,131,131,0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+// BUTTONS
+@mixin btn-green {
+  background-color: $darkGreen;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@mixin btn-transparent {
+  color: $white;
+  border: 1px solid $darkGreen;
+  padding: 10px 20px;
+  border-radius: 5px;
 }

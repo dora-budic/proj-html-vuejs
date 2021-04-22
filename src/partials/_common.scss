@@ -3,12 +3,26 @@
   display: flex;
 }
 
-.title-size {
+.title-style {
   font-size: 42px;
   font-weight: 900;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .p-font {
   font-size: 16px;
   color: $lightGrey;
+}
+
+.section-intro {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $darkGreen;
+  font-weight: bold;
+}
+
+.py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

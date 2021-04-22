@@ -1,0 +1,38 @@
+#results {
+  background-image: url('./img/bg-traffic.jpg');
+  @include bg-image(center);
+  height: 480px;
+
+  .container {
+    @include container-center;
+    .results-text {
+      text-align: center;
+      h1 {
+        color: $white;
+        span:first-child {
+          @include title-bg($white);
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      padding-top: 40px;
+
+      & > div {
+        width: calc(100% / 4);
+        text-align: center;
+        h1 {
+          color: $darkGreen;
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: $white;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -58,8 +58,8 @@
         <section id="video">
           <div class="container">
             <div class="video-text">
-              <span>introduction video</span>
-              <h1 class="title-size">
+              <span class="section-intro">introduction video</span>
+              <h1 class="title-style">
                 <span>Advisory</span>
                 <span>Performance</span>
               </h1>
@@ -72,6 +72,24 @@
                 <i class="fas fa-play"></i>
                 <img src="./dist/img/video-1.jpg" alt="video">
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="results" class="py-100">
+          <div class="container">
+            <div class="results-text">
+              <span class="section-intro">what are we doing</span>
+              <h1 class="title-style">
+                <span>Results</span>
+                <span>in Numbers</span>
+              </h1>
+            </div>
+            <div class="stats">
+              <div v-for="stat in statsInfo">
+                <h1>{{stat.number}}</h1>
+                <p>{{stat.name}}</p>
+              </div>
             </div>
           </div>
         </section>

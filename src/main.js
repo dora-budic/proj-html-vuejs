@@ -95,6 +95,24 @@ var app = new Vue ({
       }
     ],
     currentIndex: 0,
+    statsInfo: [
+      {
+        number: 128,
+        name: 'Certifications',
+      },
+      {
+        number: 230,
+        name: 'Employees',
+      },
+      {
+        number: 517,
+        name: 'Customers',
+      },
+      {
+        number: 94,
+        name: 'Countries Served',
+      },
+    ]
   },
   mounted: function () {
     setInterval(() => {

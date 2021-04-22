@@ -14,14 +14,28 @@ body {
   display: flex;
 }
 
-.title-size {
+.title-style {
   font-size: 42px;
   font-weight: 900;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .p-font {
   font-size: 16px;
   color: #bcbdbd;
+}
+
+.section-intro {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #048383;
+  font-weight: bold;
+}
+
+.py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 header .navbar-top {
@@ -201,22 +215,13 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #video .container .video-text {
   text-align: center;
 }
-#video .container .video-text > span {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #048383;
-  font-weight: bold;
-}
-#video .container .video-text > h1 {
-  margin: 30px 0;
-}
 #video .container .video-text > h1 span:first-child {
   color: #1d2528;
 }
 #video .container .video-text > h1 span:last-child {
   color: #048383;
-  background-color: #e7eee9;
-  padding: 10px;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
   border-radius: 3px;
 }
 #video .container .video-image {
@@ -252,4 +257,47 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #video .container .video-image a img {
   filter: opacity(0.8);
   width: 100%;
+}
+
+#results {
+  background-image: url("./img/bg-traffic.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 480px;
+}
+#results .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#results .container .results-text {
+  text-align: center;
+}
+#results .container .results-text h1 {
+  color: #ffffff;
+}
+#results .container .results-text h1 span:first-child {
+  color: #ffffff;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#results .container .stats {
+  display: flex;
+  padding-top: 40px;
+}
+#results .container .stats > div {
+  width: calc(100% / 4);
+  text-align: center;
+}
+#results .container .stats > div h1 {
+  color: #048383;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#results .container .stats > div p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -84,7 +84,20 @@ var app = new Vue({
       title: 'Audit & Assurance',
       description: 'Our focus is to map the technologies to solve the business transformation, offering services.'
     }],
-    currentIndex: 0
+    currentIndex: 0,
+    statsInfo: [{
+      number: 128,
+      name: 'Certifications'
+    }, {
+      number: 230,
+      name: 'Employees'
+    }, {
+      number: 517,
+      name: 'Customers'
+    }, {
+      number: 94,
+      name: 'Countries Served'
+    }]
   },
   mounted: function mounted() {
     var _this = this;
