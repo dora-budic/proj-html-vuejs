@@ -1,0 +1,30 @@
+#news {
+  background-color: $lightBlue;
+
+  .container {
+    @include container-center;
+    .news-text {
+      h1 {
+        span:first-child {
+          color: $darkGrey;
+        }
+        span:last-child {
+          @include title-bg($darkGreen);
+        }
+      }
+      .description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          @include a-style($white);
+          @include btn-green;
+
+          &:hover {
+            background-color: $lightGreen;
+          }
+        }
+      }
+    }
+  }
+}

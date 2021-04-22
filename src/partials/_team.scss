@@ -34,8 +34,9 @@
             border-radius: 5px;
             overflow: hidden;
             display: flex;
+            width: 40%;
             img {
-              width: 100px;
+              width: 100%;
             }
           }
 
@@ -62,11 +63,18 @@
                 padding: 8px;
                 border-radius: 50%;
                 width: 35px;
-
                 @include display-center;
+
                 a {
                   @include a-style($darkGreen);
                   display: flex;
+                }
+
+                &:hover {
+                  background-color: $darkGreen;
+                  a {
+                    color: $white;
+                  }
                 }
               }
             }

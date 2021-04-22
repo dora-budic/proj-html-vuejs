@@ -17,7 +17,8 @@
         p {
           width: 85%;
         }
-        span {
+        a {
+          @include a-style($white);
           @include btn-transparent;
           &:hover {
             background-color: $darkGreen;

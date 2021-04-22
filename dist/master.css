@@ -23,7 +23,7 @@ body {
 
 .p-font {
   font-size: 16px;
-  color: #bcbdbd;
+  color: #626165;
 }
 
 .subtitle {
@@ -332,7 +332,9 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #services .container .services-text .description p {
   width: 85%;
 }
-#services .container .services-text .description span {
+#services .container .services-text .description a {
+  text-decoration: none;
+  color: #ffffff;
   color: #ffffff;
   border: 1px solid #048383;
   padding: 10px 20px;
@@ -340,7 +342,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-transform: uppercase;
   font-weight: 500;
 }
-#services .container .services-text .description span:hover {
+#services .container .services-text .description a:hover {
   background-color: #048383;
 }
 #services .container .card-container {
@@ -410,9 +412,10 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   border-radius: 5px;
   overflow: hidden;
   display: flex;
+  width: 40%;
 }
 #team .container .container-left .team-members .team-member .image img {
-  width: 100px;
+  width: 100%;
 }
 #team .container .container-left .team-members .team-member .member-info {
   margin-left: 20px;
@@ -445,6 +448,12 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   color: #048383;
   display: flex;
 }
+#team .container .container-left .team-members .team-member .member-info ul li:hover {
+  background-color: #048383;
+}
+#team .container .container-left .team-members .team-member .member-info ul li:hover a {
+  color: #ffffff;
+}
 #team .container .container-right {
   width: calc(100% / 3 - 20px);
   background-color: #048383;
@@ -467,4 +476,40 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #team .container .container-right h4 i {
   font-size: 24px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+#news {
+  background-color: #e7eee9;
+}
+#news .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#news .container .news-text h1 span:first-child {
+  color: #1d2528;
+}
+#news .container .news-text h1 span:last-child {
+  color: #048383;
+  background-color: rgba(4, 131, 131, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#news .container .news-text .description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#news .container .news-text .description a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #048383;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#news .container .news-text .description a:hover {
+  background-color: #52babb;
 }
