@@ -1,12 +1,15 @@
 #video {
-  padding: 100px 0;
   .container {
+    @include container-center;
+    padding: 100px;
+
     .video-text {
       text-align: center;
+
       & > span {
         text-transform: uppercase;
         font-size: 14px;
-        color: $bg-green;
+        color: $darkGreen;
         font-weight: bold;
       }
 
@@ -14,13 +17,48 @@
         margin: 30px 0;
 
         span:first-child {
-          color: $nav-bg;
+          color: $darkGrey;
         }
         span:last-child {
-          color: $bg-green;
+          color: $darkGreen;
           background-color: $lightBlue;
           padding: 10px;
           border-radius: 3px;
+        }
+      }
+    }
+
+    .video-image {
+      margin-top: 50px;
+
+      a {
+        background-color: $darkGreen;
+        display: flex;
+        font-size: 70px;
+        @include a-style($white);
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+
+        i:first-child {
+          position: absolute;
+          top: calc(50% - 8px);
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 1;
+          color: $darkGreen;
+          opacity: 0.8;
+        }
+
+        i:nth-child(2) {
+          @include position-center;
+          opacity: 0.8;
+          z-index: 1;
+        }
+
+        img {
+          filter: opacity(0.8);
+          width: 100%;
         }
       }
     }

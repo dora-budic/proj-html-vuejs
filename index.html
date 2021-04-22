@@ -29,14 +29,14 @@
 
         <div class="jumbtron"
         :style="`background-image:url('./dist/img/${jumbtron[currentIndex].img}')`">
+        <div class="navbar-bottom">
+          <img src="./dist/img/logo.svg" alt="nexgen logo">
+          <ul class="list-inline">
+            <li v-for="link in navLinks"><a :href="link.url"><i :class="link.icon"
+              v-if="link.icon != ''"></i>{{getName(link)}}</a></li>
+            </ul>
+          </div>
           <div class="overlay">
-            <div class="navbar-bottom">
-              <img src="./dist/img/logo.svg" alt="nexgen logo">
-              <ul class="list-inline">
-                <li v-for="link in navLinks"><a :href="link.url"><i :class="link.icon"
-                  v-if="link.icon != ''"></i>{{getName(link)}}</a></li>
-              </ul>
-            </div>
             <div class="jumbtron-text">
               <h1>{{jumbtron[currentIndex].title}}</h1>
               <p>{{jumbtron[currentIndex].description}}</p>
@@ -63,9 +63,15 @@
                 <span>Advisory</span>
                 <span>Performance</span>
               </h1>
+              <p class="p-font">Financial executives need to review their strategies, operating models and capabilities
+                 so that their areas can generate sound information for better decision making.</p>
             </div>
             <div class="video-image">
-
+              <a href="#">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-play"></i>
+                <img src="./dist/img/video-1.jpg" alt="video">
+              </a>
             </div>
           </div>
         </section>

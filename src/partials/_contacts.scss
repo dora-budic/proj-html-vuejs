@@ -1,7 +1,7 @@
 header {
   .navbar-top {
-    background-color: $nav-bg;
-    height: 50px;
+    background-color: $darkGrey;
+    height: 60px;
     display: flex;
     align-items: center;
 
@@ -20,7 +20,7 @@ header {
           }
 
           &:hover {
-            color: $bg-green;
+            color: $darkGreen;
           }
         }
       }
@@ -36,7 +36,7 @@ header {
               }
 
               &:hover {
-                color: $bg-green;
+                color: $darkGreen;
               }
             }
           }

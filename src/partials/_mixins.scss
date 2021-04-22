@@ -16,7 +16,7 @@
 }
 
 @mixin btn-green {
-  background-color: $bg-green;
+  background-color: $darkGreen;
   color: $white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -24,7 +24,7 @@
 
 @mixin btn-transparent {
   color: $white;
-  border: 1px solid $bg-green;
+  border: 1px solid $darkGreen;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -34,4 +34,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+@mixin display-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
