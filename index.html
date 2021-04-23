@@ -191,19 +191,37 @@
                 <p class="p-font">Ethics and integrity are the bases on which our professionals build their careers.
                 They are fundamentals that become daily attitudes.</p>
               </div>
-              <div class="team-members">
-                <div class="team-member" v-for="expert in experts">
-                  <div class="image">
-                    <img :src="`./dist/img/${expert.img}`" :alt="expert.name">
+              <div class="team-container">
+                <div class="team-members">
+                  <div class="team-member" v-for="(expert,i) in experts" v-if="i < 2">
+                    <div class="image">
+                      <img :src="`./dist/img/${expert.img}`" :alt="expert.name">
+                    </div>
+                    <div class="member-info">
+                      <p class="subtitle">{{expert.name}}</p>
+                      <p class="position">{{expert.position}}</p>
+                      <ul class="list-inline">
+                        <li><a :href="expert.facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a :href="expert.twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a :href="expert.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="member-info">
-                    <p class="subtitle">{{expert.name}}</p>
-                    <p class="position">{{expert.position}}</p>
-                    <ul class="list-inline">
-                      <li><a :href="expert.facebook"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a :href="expert.twitter"><i class="fab fa-twitter"></i></a></li>
-                      <li><a :href="expert.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
+                </div>
+                <div class="team-members">
+                  <div class="team-member" v-for="(expert,i) in experts" v-if="i >= 2">
+                    <div class="image">
+                      <img :src="`./dist/img/${expert.img}`" :alt="expert.name">
+                    </div>
+                    <div class="member-info">
+                      <p class="subtitle">{{expert.name}}</p>
+                      <p class="position">{{expert.position}}</p>
+                      <ul class="list-inline">
+                        <li><a :href="expert.facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a :href="expert.twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a :href="expert.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

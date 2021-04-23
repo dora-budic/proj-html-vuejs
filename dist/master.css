@@ -419,13 +419,16 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #team .container .container-left .team-text h1 span:last-child {
   color: #1d2528;
 }
-#team .container .container-left .team-members {
+#team .container .container-left .team-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+#team .container .container-left .team-members {
+  display: flex;
+  flex-direction: column;
+  width: calc(100%/2 - 20px);
 }
 #team .container .container-left .team-members .team-member {
-  width: calc(100%/2 - 20px);
   display: flex;
   align-items: center;
   margin-top: 40px;
@@ -434,10 +437,9 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   border-radius: 5px;
   overflow: hidden;
   display: flex;
-  width: 40%;
 }
 #team .container .container-left .team-members .team-member .image img {
-  width: 100%;
+  width: 110px;
 }
 #team .container .container-left .team-members .team-member .member-info {
   margin-left: 20px;

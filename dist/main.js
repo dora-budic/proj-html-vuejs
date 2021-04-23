@@ -112,16 +112,16 @@ var app = new Vue({
       twitter: '#',
       linkedin: '#'
     }, {
-      img: 'team-3.jpg',
-      name: 'Oliver Jones',
-      position: 'chief procurement',
+      img: 'team-2.jpg',
+      name: 'Emma Lopez',
+      position: 'chief marketing',
       facebook: '#',
       twitter: '#',
       linkedin: '#'
     }, {
-      img: 'team-2.jpg',
-      name: 'Emma Lopez',
-      position: 'chief marketing',
+      img: 'team-3.jpg',
+      name: 'Oliver Jones',
+      position: 'chief procurement',
       facebook: '#',
       twitter: '#',
       linkedin: '#'
