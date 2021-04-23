@@ -51,7 +51,7 @@
           top: 0;
           left: 0;
           background-color: rgba(0,0,0,0.5);
-          padding: 40px 30px;
+          @include card-pad;
           display: flex;
 
           .card-top {

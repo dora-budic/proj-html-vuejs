@@ -280,7 +280,7 @@
                 </h1>
                 <p class="p-font">We will respond to your message as soon as possible.</p>
               </div>
-              <form class="" method="post">
+              <form method="post">
                 <div>
                   <input class="name" type="text" name="name" placeholder="Name">
                   <input type="email" name="email" placeholder="Email">
@@ -289,12 +289,7 @@
                   <input type="tel" name="phone number" placeholder="Phone">
                   <select name="services">
                     <option selected disabled>More Info</option>
-                    <option value="audit">Audit &amp; Assurance</option>
-                    <option value="financial">Financial Advisory</option>
-                    <option value="analytics">Analytics and M&amp;A</option>
-                    <option value="marketing">Middle Marketing</option>
-                    <option value="legal">Legal Consulting</option>
-                    <option value="risk">Regulatory Risk</option>
+                    <option v-for="service in servicesList" :value="service.name">{{service.name}}</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -321,7 +316,48 @@
       </main>
 
       <footer>
+        <div class="footer-links py-100">
+          <div class="container">
+            <div class="contact-info">
+              <img src="./dist/img/logo.svg" alt="nexgen logo">
+              <p>A Functional HTML Template for Corporate &amp; Business.</p>
+              <ul>
+                <li v-for="contact in contacts.slice(0,3)">
+                  <a :href="contact.url">
+                    <i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>
+                    {{contact.text}}
+                  </a>
+                </li>
+              </ul>
+              <a href="#">get in touch</a>
+            </div>
+            <div class="footer-list">
+              <p class="subtitle">About</p>
+              <ul>
+                <li v-for="item in aboutList"><a :href="item.url"><i class="fas fa-chevron-right"></i>{{item.name}}</a></li>
+              </ul>
+            </div>
+            <div class="footer-list">
+              <p class="subtitle">Services</p>
+              <ul>
+                <li v-for="service in servicesList"><a :href="service.url"><i class="fas fa-chevron-right"></i>{{service.name}}</a></li>
+              </ul>
+            </div>
+            <div class="footer-list">
+              <p class="subtitle">Support</p>
+              <ul>
+                <li v-for="support in supportList"><a :href="support.url"><i class="fas fa-chevron-right"></i>{{support.name}}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
+        <div class="copyright-container">
+          <div class="copyright">
+            <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+            <p>&copy; 2020 NEXGEN is Proudly Powered by <a href="#">Codings</a>.</p>
+          </div>
+        </div>
       </footer>
     </div>
 

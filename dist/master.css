@@ -359,6 +359,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   padding: 40px 30px;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease;
 }
 #services .container .card-container .card:hover {
   position: relative;
@@ -755,15 +756,119 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-align: center;
 }
 #form .container .form-right > a {
-  text-decoration: none;
   color: #ffffff;
-  background-color: #41C457;
-  color: #ffffff;
+  border: 1px solid #41C457;
   padding: 10px 20px;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 500;
+  text-decoration: none;
+  color: #41C457;
 }
 #form .container .form-right > a:hover {
-  background-color: #5DE874;
+  background-color: #41C457;
+  color: #ffffff;
+}
+
+footer .footer-links {
+  background-image: url("./img/bg-7.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer .footer-links .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+footer .footer-links .container > div {
+  width: calc(100% / 4 - 20px);
+}
+footer .footer-links .container .contact-info img {
+  width: 110px;
+}
+footer .footer-links .container .contact-info p {
+  color: #bcbdbd;
+  margin: 20px 0;
+}
+footer .footer-links .container .contact-info ul {
+  list-style: none;
+  margin-bottom: 40px;
+}
+footer .footer-links .container .contact-info ul li {
+  margin-bottom: 20px;
+}
+footer .footer-links .container .contact-info ul li a {
+  text-decoration: none;
+  color: #bcbdbd;
+}
+footer .footer-links .container .contact-info ul li a i {
+  margin-right: 5px;
+}
+footer .footer-links .container .contact-info ul li a:hover {
+  color: #41C457;
+}
+footer .footer-links .container .contact-info > a {
+  color: #ffffff;
+  border: 1px solid #41C457;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .footer-links .container .contact-info > a:hover {
+  background-color: #41C457;
+  color: #ffffff;
+}
+footer .footer-links .container .footer-list {
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+footer .footer-links .container .footer-list:hover {
+  position: relative;
+  transform: translatey(-10px);
+}
+footer .footer-links .container .footer-list ul {
+  margin-top: 20px;
+  list-style: none;
+}
+footer .footer-links .container .footer-list ul li {
+  margin-bottom: 10px;
+}
+footer .footer-links .container .footer-list ul li:hover a {
+  color: #41C457;
+}
+footer .footer-links .container .footer-list ul li a {
+  text-decoration: none;
+  color: #bcbdbd;
+}
+footer .footer-links .container .footer-list ul li a i {
+  margin-right: 10px;
+}
+footer .copyright-container {
+  background-color: #000000;
+  height: 60px;
+}
+footer .copyright-container .copyright {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .copyright-container .copyright p {
+  font-size: 14px;
+  color: #bcbdbd;
+}
+footer .copyright-container .copyright p a {
+  text-decoration: none;
+  color: #41C457;
 }

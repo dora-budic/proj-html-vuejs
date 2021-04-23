@@ -151,6 +151,63 @@ var app = new Vue({
       time: '16 Days Ago',
       title: 'Working from home is now a trend',
       about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    }],
+    aboutList: [{
+      name: 'The Company',
+      url: '#'
+    }, {
+      name: 'Institutional',
+      url: '#'
+    }, {
+      name: 'Social & Events',
+      url: '#'
+    }, {
+      name: 'Innovation',
+      url: '#'
+    }, {
+      name: 'Environment',
+      url: '#'
+    }, {
+      name: 'Technology',
+      url: '#'
+    }],
+    servicesList: [{
+      name: 'Audit & Assurance',
+      url: '#'
+    }, {
+      name: 'Financial Advisory',
+      url: '#'
+    }, {
+      name: 'Analytics and M&A',
+      url: '#'
+    }, {
+      name: 'Middle Marketing',
+      url: '#'
+    }, {
+      name: 'Legal Consulting',
+      url: '#'
+    }, {
+      name: 'Regulatory Risk',
+      url: '#'
+    }],
+    supportList: [{
+      name: 'Responsibility',
+      url: '#'
+    }, {
+      name: 'Terms of Use',
+      url: '#'
+    }, {
+      name: 'About Cookies',
+      url: '#'
+    }, {
+      name: 'Privacy Policy',
+      url: '#'
+    }, {
+      name: 'Accessibility',
+      url: '#'
+    }, {
+      name: 'Information',
+      url: '#'
     }]
   },
   mounted: function mounted() {

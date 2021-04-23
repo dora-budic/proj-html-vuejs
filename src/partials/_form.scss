@@ -91,11 +91,12 @@
         }
       }
       & > a {
-        @include a-style($white);
-        @include btn-green;
+        @include btn-transparent;
+        @include a-style($darkGreen);
 
         &:hover {
-          background-color: $lightGreen;
+          background-color: $darkGreen;
+          color: $white;
         }
       }
     }

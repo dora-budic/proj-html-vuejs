@@ -38,9 +38,10 @@
         margin-bottom: 20px;
         background-color: $overlay-bg;
         border-radius: 5px;
-        padding: 40px 30px;
+        @include card-pad;
         cursor: pointer;
         position: relative;
+        transition: all 0.3s ease;
 
         &:hover {
           position: relative;
