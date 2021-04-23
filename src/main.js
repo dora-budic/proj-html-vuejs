@@ -190,7 +190,6 @@ var app = new Vue ({
     },
     changeJumbo: function (index) {
       this.currentIndex = index;
-    }
-
+    },
   }
 });

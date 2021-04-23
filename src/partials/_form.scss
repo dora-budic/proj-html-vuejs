@@ -1,0 +1,75 @@
+#form {
+  .container {
+    @include container-center;
+    display: flex;
+    justify-content: space-between;
+
+    .form-left {
+      width: calc(100% / 3 * 2);
+      padding-right: 30px;
+      .form-text {
+        margin-bottom: 40px;
+        h1 {
+          span:first-child {
+            color: $darkGrey;
+          }
+
+          span:last-child {
+            @include title-bg($darkGreen);
+          }
+        }
+      }
+
+      form {
+        & > div {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+        input {
+          @include input-style($paleGrey);
+          width: calc(50% - 10px);
+          &.name {
+            background-image: url('./img/input1.png');
+            background-repeat: no-repeat;
+            background-position: 95%;
+          }
+        }
+        select {
+          width: calc(50% - 10px);
+          -webkit-appearance: none;
+          @include input-style($paleGrey);
+          color: #808080;
+          background-image: url('./img/chevron-down.svg');
+          background-repeat: no-repeat;
+          background-position: 95%;
+          background-size: 13px;
+        }
+
+        textarea {
+          @include input-style($paleGrey);
+          width: 100%;
+          margin-bottom: 40px;
+        }
+
+        a {
+          @include a-style($white);
+          @include btn-green;
+          &:hover {
+            background-color: $lightGreen;
+          }
+        }
+      }
+    }
+
+    .form-right {
+      width: calc(100% / 3 - 20px);
+      p {
+        margin-bottom: 20px;
+      }
+      p.subtitle {
+        color: $darkGrey;
+      }
+    }
+  }
+}

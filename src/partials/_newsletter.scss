@@ -26,12 +26,7 @@
       justify-content: space-between;
 
       input {
-        outline: 0;
-        background-color: $darkGrey;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
+        @include input-style($darkGrey);
       }
 
       a {

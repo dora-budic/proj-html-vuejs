@@ -35,7 +35,7 @@ body {
 .section-intro {
   text-transform: uppercase;
   font-size: 14px;
-  color: #048383;
+  color: #41C457;
   font-weight: bold;
 }
 
@@ -67,7 +67,7 @@ header .navbar-top .contacts .contacts-left a i {
   margin-right: 5px;
 }
 header .navbar-top .contacts .contacts-left a:hover {
-  color: #048383;
+  color: #41C457;
 }
 header .navbar-top .contacts .contacts-right ul li {
   margin-left: 20px;
@@ -80,7 +80,7 @@ header .navbar-top .contacts .contacts-right ul li a i {
   margin-right: 5px;
 }
 header .navbar-top .contacts .contacts-right ul li a:hover {
-  color: #048383;
+  color: #41C457;
 }
 
 .jumbtron {
@@ -118,10 +118,10 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-weight: 500;
 }
 .jumbtron .navbar-bottom ul li a:hover {
-  color: #048383;
+  color: #41C457;
 }
 .jumbtron .navbar-bottom ul li:last-child {
-  background-color: #048383;
+  background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -129,7 +129,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-weight: 500;
 }
 .jumbtron .navbar-bottom ul li:last-child:hover {
-  background-color: #52babb;
+  background-color: #5DE874;
   color: #ffffff;
 }
 .jumbtron .navbar-bottom ul li:last-child a:hover {
@@ -173,7 +173,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   color: #ffffff;
 }
 .jumbtron .overlay .jumbtron-text ul li:first-child {
-  background-color: #048383;
+  background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -182,18 +182,18 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   margin-right: 15px;
 }
 .jumbtron .overlay .jumbtron-text ul li:first-child:hover {
-  background-color: #52babb;
+  background-color: #5DE874;
 }
 .jumbtron .overlay .jumbtron-text ul li:last-child {
   color: #ffffff;
-  border: 1px solid #048383;
+  border: 1px solid #41C457;
   padding: 10px 20px;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 500;
 }
 .jumbtron .overlay .jumbtron-text ul li:last-child:hover {
-  background-color: #048383;
+  background-color: #41C457;
 }
 .jumbtron .overlay .slider-icons {
   position: absolute;
@@ -206,14 +206,14 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 .jumbtron .overlay .slider-icons span {
   height: 35px;
-  border: 1px solid #048383;
+  border: 1px solid #41C457;
   padding: 4px;
   border-radius: 10px;
   margin-bottom: 10px;
   cursor: pointer;
 }
 .jumbtron .overlay .slider-icons span.active, .jumbtron .overlay .slider-icons span:hover {
-  background-color: #048383;
+  background-color: #41C457;
 }
 
 #video .container {
@@ -229,8 +229,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   color: #1d2528;
 }
 #video .container .video-text > h1 span:last-child {
-  color: #048383;
-  background-color: rgba(4, 131, 131, 0.2);
+  color: #41C457;
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -238,7 +238,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   margin-top: 50px;
 }
 #video .container .video-image a {
-  background-color: #048383;
+  background-color: #41C457;
   display: flex;
   font-size: 70px;
   text-decoration: none;
@@ -253,7 +253,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: #048383;
+  color: #41C457;
   opacity: 0.8;
 }
 #video .container .video-image a i:nth-child(2) {
@@ -289,7 +289,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #results .container .results-text h1 span:first-child {
   color: #ffffff;
-  background-color: rgba(4, 131, 131, 0.2);
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -302,7 +302,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-align: center;
 }
 #results .container .stats > div h1 {
-  color: #048383;
+  color: #41C457;
   font-size: 30px;
   margin-bottom: 10px;
 }
@@ -320,7 +320,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #services .container .services-text > h1 span:last-child {
   color: #ffffff;
-  background-color: rgba(4, 131, 131, 0.2);
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -336,14 +336,14 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-decoration: none;
   color: #ffffff;
   color: #ffffff;
-  border: 1px solid #048383;
+  border: 1px solid #41C457;
   padding: 10px 20px;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 500;
 }
 #services .container .services-text .description a:hover {
-  background-color: #048383;
+  background-color: #41C457;
 }
 #services .container .card-container {
   display: flex;
@@ -365,7 +365,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   transform: translatey(-10px);
 }
 #services .container .card-container .card:hover div.circle {
-  background-color: #048383;
+  background-color: #41C457;
 }
 #services .container .card-container .card:hover div.circle i.fa-arrow-right {
   color: #ffffff;
@@ -394,7 +394,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   margin: 20px 0;
 }
 #services .container .card-container .card .card-text i {
-  color: #048383;
+  color: #41C457;
   font-size: 30px;
 }
 
@@ -410,8 +410,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   width: calc(100% / 3 * 2);
 }
 #team .container .container-left .team-text h1 span:first-child {
-  color: #048383;
-  background-color: rgba(4, 131, 131, 0.2);
+  color: #41C457;
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -466,18 +466,18 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #team .container .container-left .team-members .team-member .member-info ul li a {
   text-decoration: none;
-  color: #048383;
+  color: #41C457;
   display: flex;
 }
 #team .container .container-left .team-members .team-member .member-info ul li:hover {
-  background-color: #048383;
+  background-color: #41C457;
 }
 #team .container .container-left .team-members .team-member .member-info ul li:hover a {
   color: #ffffff;
 }
 #team .container .container-right {
   width: calc(100% / 3 - 20px);
-  background-color: #048383;
+  background-color: #41C457;
   padding: 30px 20px;
   border-radius: 5px;
 }
@@ -510,8 +510,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   color: #1d2528;
 }
 #news .container .news-text h1 span:last-child {
-  color: #048383;
-  background-color: rgba(4, 131, 131, 0.2);
+  color: #41C457;
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -523,7 +523,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #news .container .news-text .description a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #048383;
+  background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -531,7 +531,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-weight: 500;
 }
 #news .container .news-text .description a:hover {
-  background-color: #52babb;
+  background-color: #5DE874;
 }
 #news .container .card-container {
   display: flex;
@@ -613,7 +613,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #newsletter .container .container-left .newsletter-text h1 span:first-child {
   color: #ffffff;
-  background-color: rgba(4, 131, 131, 0.2);
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -634,7 +634,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #newsletter .container .container-right a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #048383;
+  background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -642,5 +642,95 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-weight: 500;
 }
 #newsletter .container .container-right a:hover {
-  background-color: #52babb;
+  background-color: #5DE874;
+}
+
+#form .container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#form .container .form-left {
+  width: calc(100% / 3 * 2);
+  padding-right: 30px;
+}
+#form .container .form-left .form-text {
+  margin-bottom: 40px;
+}
+#form .container .form-left .form-text h1 span:first-child {
+  color: #1d2528;
+}
+#form .container .form-left .form-text h1 span:last-child {
+  color: #41C457;
+  background-color: rgba(65, 196, 87, 0.2);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#form .container .form-left form > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#form .container .form-left form input {
+  outline: 0;
+  background-color: #e7eee9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  width: calc(50% - 10px);
+}
+#form .container .form-left form input.name {
+  background-image: url("./img/input1.png");
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+#form .container .form-left form select {
+  width: calc(50% - 10px);
+  -webkit-appearance: none;
+  outline: 0;
+  background-color: #e7eee9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #808080;
+  background-image: url("./img/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-size: 13px;
+}
+#form .container .form-left form textarea {
+  outline: 0;
+  background-color: #e7eee9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#form .container .form-left form a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #41C457;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#form .container .form-left form a:hover {
+  background-color: #5DE874;
+}
+#form .container .form-right {
+  width: calc(100% / 3 - 20px);
+}
+#form .container .form-right p {
+  margin-bottom: 20px;
+}
+#form .container .form-right p.subtitle {
+  color: #1d2528;
 }
