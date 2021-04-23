@@ -49,6 +49,12 @@ header .navbar-top {
   height: 60px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: all 0.3s ease-out;
 }
 header .navbar-top .contacts {
   width: 70%;
@@ -89,7 +95,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-repeat: no-repeat;
   height: 630px;
   position: relative;
-  transition: all 0.8s linear;
+  transition: background-image 0.8s linear;
+  margin-top: 60px;
 }
 .jumbtron .navbar-bottom {
   width: 70%;
@@ -99,9 +106,13 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-  padding-top: 30px;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  height: 70px;
+  transition: all 0.3s ease-out;
 }
 .jumbtron .navbar-bottom img {
   width: 110px;

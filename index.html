@@ -34,11 +34,15 @@
 
         <div class="jumbtron"
         :style="`background-image:url('./dist/img/${jumbtron[currentIndex].img}')`">
-        <div class="navbar-bottom">
-          <img src="./dist/img/logo.svg" alt="nexgen logo">
-          <ul class="list-inline">
-            <li v-for="link in navLinks"><a :href="link.url"><i :class="link.icon"
-              v-if="link.icon != ''"></i>{{getName(link)}}</a></li>
+          <div class="navbar-bottom">
+            <img src="./dist/img/logo.svg" alt="nexgen logo">
+            <ul class="list-inline">
+              <li v-for="link in navLinks">
+                <a :href="link.url">
+                  <i :class="link.icon" v-if="link.icon != ''"></i>
+                  {{getName(link)}}
+                </a>
+              </li>
             </ul>
           </div>
           <div class="overlay">

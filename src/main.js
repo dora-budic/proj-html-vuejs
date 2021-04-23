@@ -264,6 +264,28 @@ var app = new Vue ({
         this.currentIndex = 0;
       }
     }, 10000)
+
+    let prevScrollpos = 0;
+    let topNav = document.getElementsByClassName('navbar-top');
+    let contact = document.getElementsByClassName('contacts');
+    let jumbo = document.getElementsByClassName('jumbtron');
+    let bottomNav = document.getElementsByClassName('navbar-bottom');
+    
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos == currentScrollPos) {
+        contact[0].style.display = "flex";
+        topNav[0].style.height = "60px";
+        jumbo[0].style.margin = "60px 0 0";
+        bottomNav[0].style.top = "80px"
+      } else {
+        contact[0].style.display = "none";
+        topNav[0].style.height = "70px";
+        jumbo[0].style.margin = "0";
+        bottomNav[0].style.top = "0";
+      }
+    }
+
   },
   methods: {
     getName: function (object) {

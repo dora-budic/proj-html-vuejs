@@ -220,6 +220,27 @@ var app = new Vue({
         _this.currentIndex = 0;
       }
     }, 10000);
+    var prevScrollpos = 0;
+    var topNav = document.getElementsByClassName('navbar-top');
+    var contact = document.getElementsByClassName('contacts');
+    var jumbo = document.getElementsByClassName('jumbtron');
+    var bottomNav = document.getElementsByClassName('navbar-bottom');
+
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+
+      if (prevScrollpos == currentScrollPos) {
+        contact[0].style.display = "flex";
+        topNav[0].style.height = "60px";
+        jumbo[0].style.margin = "60px 0 0";
+        bottomNav[0].style.top = "80px";
+      } else {
+        contact[0].style.display = "none";
+        topNav[0].style.height = "70px";
+        jumbo[0].style.margin = "0";
+        bottomNav[0].style.top = "0";
+      }
+    };
   },
   methods: {
     getName: function getName(object) {

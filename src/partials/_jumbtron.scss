@@ -2,7 +2,8 @@
   @include bg-image(top);
   height: 630px;
   position: relative;
-  transition: all 0.8s linear;
+  transition: background-image 0.8s linear;
+  margin-top: 60px;
 
   .navbar-bottom {
     @include container-center;
@@ -10,9 +11,13 @@
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
-    position: relative;
-    z-index: 1;
-    padding-top: 30px;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 70px;
+    transition: all .3s ease-out;
 
     img {
       width: 110px;
