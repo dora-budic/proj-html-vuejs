@@ -70,6 +70,34 @@
       p.subtitle {
         color: $darkGrey;
       }
+
+      ul {
+        list-style: none;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        li {
+          margin-bottom: 20px;
+          a {
+            @include a-style($darkGreen);
+            i {
+              margin-right: 5px;
+              background-color: rgba(65,196,87,0.2);
+              padding: 10px;
+              border-radius: 50%;
+              width: 40px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      & > a {
+        @include a-style($white);
+        @include btn-green;
+
+        &:hover {
+          background-color: $lightGreen;
+        }
+      }
     }
   }
 }

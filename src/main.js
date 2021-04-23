@@ -19,6 +19,13 @@ var app = new Vue ({
         url: '#',
       },
       {
+        family: 'fas',
+        prefix: 'fa-',
+        type: 'map-marker-alt',
+        text: 'Main Avenue, 987',
+        url: '#',
+      },
+      {
         family: 'fab',
         prefix: 'fa-',
         type: 'facebook-f',

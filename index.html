@@ -21,7 +21,12 @@
             </div>
             <div class="contacts-right">
               <ul class="list-inline">
-                <li v-for="contact in contacts"><a :href="contact.url"><i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>{{contact.text}}</a></li>
+                <li v-for="contact in contacts" v-if="contact.type != 'map-marker-alt'">
+                <a :href="contact.url">
+                  <i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>
+                  {{contact.text}}
+                </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -302,8 +307,14 @@
               <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <p class="p-font">Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
               <ul>
-                <li><a href="#"></a> </li>
+                <li v-for="contact in contacts.slice(0,3)">
+                  <a :href="contact.url">
+                    <i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>
+                    {{contact.text}}
+                  </a>
+                </li>
               </ul>
+              <a href="#">view map</a>
             </div>
           </div>
         </section>

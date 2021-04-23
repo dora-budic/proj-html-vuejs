@@ -456,7 +456,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #team .container .container-left .team-members .team-member .member-info ul li {
   margin-right: 5px;
-  background-color: rgba(4, 131, 131, 0.2);
+  background-color: rgba(65, 196, 87, 0.2);
   padding: 8px;
   border-radius: 50%;
   width: 35px;
@@ -733,4 +733,37 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 #form .container .form-right p.subtitle {
   color: #1d2528;
+}
+#form .container .form-right ul {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#form .container .form-right ul li {
+  margin-bottom: 20px;
+}
+#form .container .form-right ul li a {
+  text-decoration: none;
+  color: #41C457;
+}
+#form .container .form-right ul li a i {
+  margin-right: 5px;
+  background-color: rgba(65, 196, 87, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  text-align: center;
+}
+#form .container .form-right > a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #41C457;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#form .container .form-right > a:hover {
+  background-color: #5DE874;
 }
