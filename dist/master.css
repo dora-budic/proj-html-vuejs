@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -227,6 +228,69 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #41C457;
 }
 
+.sign-in, .register {
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 3;
+  height: 100vh;
+  width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right 0.5s linear;
+}
+.sign-in i, .register i {
+  color: #1d2528;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.sign-in i:hover, .register i:hover {
+  color: #41C457;
+}
+.sign-in h1, .register h1 {
+  color: #1d2528;
+}
+.sign-in p, .register p {
+  margin-bottom: 30px;
+}
+.sign-in p a, .register p a {
+  text-decoration: none;
+  color: #41C457;
+}
+.sign-in form, .register form {
+  display: flex;
+  flex-direction: column;
+}
+.sign-in form input, .register form input {
+  outline: 0;
+  background-color: #e7eee9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.sign-in form input[type=submit], .register form input[type=submit] {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #41C457;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 125px;
+}
+.sign-in form input[type=submit]:hover, .register form input[type=submit]:hover {
+  background-color: #5DE874;
+}
+
 #video .container {
   width: 70%;
   margin-left: auto;
@@ -257,6 +321,15 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+}
+#video .container .video-image a:hover i:first-child {
+  opacity: 1;
+}
+#video .container .video-image a:hover i:nth-child(2) {
+  opacity: 1;
+}
+#video .container .video-image a:hover img {
+  filter: opacity(0.7);
 }
 #video .container .video-image a i:first-child {
   position: absolute;
@@ -399,7 +472,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(4, 131, 131, 0.5);
+  color: rgba(65, 196, 87, 0.5);
   font-size: 18px;
 }
 #services .container .card-container .card .card-text p.subtitle {
@@ -726,9 +799,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   width: 100%;
   margin-bottom: 40px;
 }
-#form .container .form-left form a {
-  text-decoration: none;
-  color: #ffffff;
+#form .container .form-left form input[type=submit] {
+  width: 100px;
   background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
@@ -736,7 +808,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-transform: uppercase;
   font-weight: 500;
 }
-#form .container .form-left form a:hover {
+#form .container .form-left form input[type=submit]:hover {
   background-color: #5DE874;
 }
 #form .container .form-right {

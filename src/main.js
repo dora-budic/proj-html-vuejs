@@ -56,32 +56,32 @@ var app = new Vue ({
       {
         name:'about',
         icon: '',
-        url: '#',
+        url: '#video',
       },
       {
         name:'services',
         icon: '',
-        url: '#',
+        url: '#services',
       },
       {
         name:'team',
         icon: '',
-        url: '#',
+        url: '#team',
       },
       {
         name:'blog',
         icon: '',
-        url: '#',
+        url: '#news',
       },
       {
         name: 'profile',
         icon: 'far fa-user',
-        url: '#',
+        url: '#window',
       },
       {
         name:'get in touch',
         icon: '',
-        url: '#',
+        url: '#form',
       },
     ],
     jumbtron: [
@@ -255,6 +255,8 @@ var app = new Vue ({
         url: '#',
       },
     ],
+    sideWindow: false,
+    registerWindow: false,
   },
   mounted: function () {
     setInterval(() => {
@@ -270,7 +272,7 @@ var app = new Vue ({
     let contact = document.getElementsByClassName('contacts');
     let jumbo = document.getElementsByClassName('jumbtron');
     let bottomNav = document.getElementsByClassName('navbar-bottom');
-    
+
     window.onscroll = function() {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos == currentScrollPos) {
@@ -298,5 +300,34 @@ var app = new Vue ({
     changeJumbo: function (index) {
       this.currentIndex = index;
     },
+    showWindow: function (object) {
+      if (object.name == 'profile') {
+        this.sideWindow = true;
+        document.getElementsByClassName('sign-in')[0].style.right = '0';
+      }
+    },
+    hideWindow: function (e) {
+      this.sideWindow = false;
+      document.getElementsByClassName('sign-in')[0].style.right = '-500px';
+      this.registerWindow = false;
+      document.getElementsByClassName('register')[0].style.right = '-500px';
+    },
+    changeWindow: function (e) {
+      if (e.target.innerHTML == 'Register Now.') {
+        this.sideWindow = false;
+        document.getElementsByClassName('sign-in')[0].style.right = '-500px';
+        setTimeout(() => {
+          this.registerWindow = true;
+          document.getElementsByClassName('register')[0].style.right = '0';
+        }, 500);
+      } else {
+        this.registerWindow = false;
+        document.getElementsByClassName('register')[0].style.right = '-500px';
+        setTimeout(() => {
+          this.sideWindow = true;
+          document.getElementsByClassName('sign-in')[0].style.right = '0';
+        },500);
+      }
+    }
   }
 });

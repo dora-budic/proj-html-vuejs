@@ -13,6 +13,7 @@
 
   <body>
     <div id="root">
+      <!-- Menu with contact info -->
       <header>
         <div class="navbar-top">
           <div class="contacts">
@@ -32,14 +33,17 @@
           </div>
         </div>
 
+        <!-- Jumbo with navbar and text in the middle/slider -->
         <div class="jumbtron"
         :style="`background-image:url('./dist/img/${jumbtron[currentIndex].img}')`">
           <div class="navbar-bottom">
-            <img src="./dist/img/logo.svg" alt="nexgen logo">
+            <a href="#"><img src="./dist/img/logo.svg" alt="nexgen logo"></a>
             <ul class="list-inline">
               <li v-for="link in navLinks">
                 <a :href="link.url">
-                  <i :class="link.icon" v-if="link.icon != ''"></i>
+                  <i :class="link.icon" v-if="link.icon != ''"
+                    @click="showWindow(link)"
+                  ></i>
                   {{getName(link)}}
                 </a>
               </li>
@@ -50,7 +54,7 @@
               <h1>{{jumbtron[currentIndex].title}}</h1>
               <p>{{jumbtron[currentIndex].description}}</p>
               <ul class="list-inline">
-                <li><a href="#">Get in touch</a></li>
+                <li><a href="#form">Get in touch</a></li>
                 <li><a href="#">Read more</a></li>
               </ul>
             </div>
@@ -61,9 +65,47 @@
             </div>
           </div>
         </div>
+
+        <!-- Pop-up on right - account sign in -->
+        <div id="window" class="sign-in">
+          <i class="fas fa-arrow-right"
+          @click="hideWindow"></i>
+          <h1 class="title-style">
+            <span>Sign In</span>
+          </h1>
+          <p class="p-font">
+            Don't have an account?
+            <a href="#reg-window" @click="changeWindow(event)">Register Now.</a>
+          </p>
+          <form>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="pwd" placeholder="Password" required>
+            <input type="submit" name="signin" value="Sign In">
+          </form>
+        </div>
+
+        <!-- Pop-up on right - register account -->
+        <div id="reg-window" class="register">
+          <i class="fas fa-arrow-right"
+          @click="hideWindow(event)"></i>
+          <h1 class="title-style">
+            <span>Register</span>
+          </h1>
+          <p class="p-font">
+            Have an account? <a href="#window" @click="changeWindow(event)">Sign In.</a>
+          </p>
+          <form>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="pwd" placeholder="Password" required>
+            <input type="password" name="pwd" placeholder="Confirm Password" required>
+            <input type="submit" name="signin" value="Register">
+          </form>
+        </div>
       </header>
 
       <main>
+        <!-- About section, text and video -->
         <section id="video">
           <div class="container">
             <div class="video-text">
@@ -85,6 +127,7 @@
           </div>
         </section>
 
+        <!-- Section with statistics, title and 4 columns -->
         <section id="results" class="py-100">
           <div class="container">
             <div class="results-text">
@@ -103,6 +146,7 @@
           </div>
         </section>
 
+        <!-- Services section - title and 6 cards -->
         <section id="services" class="py-100">
           <div class="container">
             <div class="services-text">
@@ -178,11 +222,11 @@
                   <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
+        <!-- Team section - team member on left(4 cards), text card on right -->
         <section id="team" class="py-100">
           <div class="container">
             <div class="container-left">
@@ -240,6 +284,7 @@
           </div>
         </section>
 
+        <!-- Blog section - title and 3 cards -->
         <section id="news" class="py-100">
           <div class="container">
             <div class="news-text">
@@ -271,6 +316,7 @@
           </div>
         </section>
 
+        <!-- Newsletter section - text on left and form on right -->
         <section id="newsletter" class="py-100">
           <div class="container">
             <div class="container-left">
@@ -291,6 +337,7 @@
           </div>
         </section>
 
+        <!-- Message section - form on left and contact info on right -->
         <section id="form" class="py-100">
           <div class="container">
             <div class="form-left">
@@ -302,21 +349,21 @@
                 </h1>
                 <p class="p-font">We will respond to your message as soon as possible.</p>
               </div>
-              <form method="post">
+              <form>
                 <div>
-                  <input class="name" type="text" name="name" placeholder="Name">
-                  <input type="email" name="email" placeholder="Email">
+                  <input class="name" type="text" name="name" placeholder="Name" required>
+                  <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div>
-                  <input type="tel" name="phone number" placeholder="Phone">
-                  <select name="services">
-                    <option selected disabled>More Info</option>
+                  <input type="tel" name="phone number" placeholder="Phone" required>
+                  <select name="services" required>
+                    <option value="">More Info</option>
                     <option v-for="service in servicesList" :value="service.name">{{service.name}}</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
                 <textarea name="message" rows="8" placeholder="Message"></textarea>
-                <a href="#">send</a>
+                <input type="submit" name="submit" value="send">
               </form>
             </div>
             <div class="form-right">
@@ -338,6 +385,7 @@
       </main>
 
       <footer>
+        <!-- Various links in 4 columns -->
         <div class="footer-links py-100">
           <div class="container">
             <div class="contact-info">
@@ -351,7 +399,7 @@
                   </a>
                 </li>
               </ul>
-              <a href="#">get in touch</a>
+              <a href="#form">get in touch</a>
             </div>
             <div class="footer-list">
               <p class="subtitle">About</p>
@@ -374,6 +422,7 @@
           </div>
         </div>
 
+        <!-- Copyright section -->
         <div class="copyright-container">
           <div class="copyright">
             <p>Enjoy the low price. We are tracking any intention of piracy.</p>

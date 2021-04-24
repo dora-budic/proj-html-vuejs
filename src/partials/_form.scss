@@ -52,8 +52,8 @@
           margin-bottom: 40px;
         }
 
-        a {
-          @include a-style($white);
+        input[type="submit"] {
+          width: 100px;
           @include btn-green;
           &:hover {
             background-color: $lightGreen;

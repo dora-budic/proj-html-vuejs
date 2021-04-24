@@ -28,6 +28,18 @@
         border-radius: 5px;
         overflow: hidden;
 
+        &:hover {
+          i:first-child {
+            opacity: 1;
+          }
+          i:nth-child(2) {
+            opacity: 1;
+          }
+          img {
+            filter: opacity(0.7);
+          }
+        }
+
         i:first-child {
           position: absolute;
           top: calc(50% - 8px);

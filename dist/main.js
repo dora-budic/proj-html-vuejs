@@ -55,27 +55,27 @@ var app = new Vue({
     }, {
       name: 'about',
       icon: '',
-      url: '#'
+      url: '#video'
     }, {
       name: 'services',
       icon: '',
-      url: '#'
+      url: '#services'
     }, {
       name: 'team',
       icon: '',
-      url: '#'
+      url: '#team'
     }, {
       name: 'blog',
       icon: '',
-      url: '#'
+      url: '#news'
     }, {
       name: 'profile',
       icon: 'far fa-user',
-      url: '#'
+      url: '#window'
     }, {
       name: 'get in touch',
       icon: '',
-      url: '#'
+      url: '#form'
     }],
     jumbtron: [{
       img: 'bg-1.jpg',
@@ -208,7 +208,9 @@ var app = new Vue({
     }, {
       name: 'Information',
       url: '#'
-    }]
+    }],
+    sideWindow: false,
+    registerWindow: false
   },
   mounted: function mounted() {
     var _this = this;
@@ -252,6 +254,37 @@ var app = new Vue({
     },
     changeJumbo: function changeJumbo(index) {
       this.currentIndex = index;
+    },
+    showWindow: function showWindow(object) {
+      if (object.name == 'profile') {
+        this.sideWindow = true;
+        document.getElementsByClassName('sign-in')[0].style.right = '0';
+      }
+    },
+    hideWindow: function hideWindow(e) {
+      this.sideWindow = false;
+      document.getElementsByClassName('sign-in')[0].style.right = '-500px';
+      this.registerWindow = false;
+      document.getElementsByClassName('register')[0].style.right = '-500px';
+    },
+    changeWindow: function changeWindow(e) {
+      var _this2 = this;
+
+      if (e.target.innerHTML == 'Register Now.') {
+        this.sideWindow = false;
+        document.getElementsByClassName('sign-in')[0].style.right = '-500px';
+        setTimeout(function () {
+          _this2.registerWindow = true;
+          document.getElementsByClassName('register')[0].style.right = '0';
+        }, 500);
+      } else {
+        this.registerWindow = false;
+        document.getElementsByClassName('register')[0].style.right = '-500px';
+        setTimeout(function () {
+          _this2.sideWindow = true;
+          document.getElementsByClassName('sign-in')[0].style.right = '0';
+        }, 500);
+      }
     }
   }
 });
