@@ -25,6 +25,7 @@
 
     ul {
       align-items: center;
+
       li {
         margin-left: 20px;
         a {
@@ -34,18 +35,38 @@
             color: $darkGreen;
           }
         }
+      }
 
-        &:last-child {
-          @include btn-green;
-          &:hover {
-            background-color: $lightGreen;
-            color: $white;
-          }
-          a:hover {
-            color: $white;
+      &.menu {
+        display: none;
+
+        @media all and (min-width: $breakpoint-md) {
+          display: flex;
+        }
+        li {
+          &:last-child {
+            @include btn-green;
+            &:hover {
+              background-color: $lightGreen;
+              color: $white;
+            }
+            a:hover {
+              color: $white;
+            }
           }
         }
       }
+
+      &.hamburger {
+        display: flex;
+        @media all and (min-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+    }
+
+    & > a {
+      @include a-style($white);
     }
   }
 

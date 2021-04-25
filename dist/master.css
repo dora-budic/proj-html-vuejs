@@ -58,13 +58,18 @@ header .navbar-top {
   transition: all 0.3s ease-out;
 }
 header .navbar-top .contacts {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   color: #bcbdbd;
-  display: flex;
+  display: none;
   justify-content: space-between;
   font-size: 14px;
+}
+@media all and (min-width: 992px) {
+  header .navbar-top .contacts {
+    display: flex;
+  }
 }
 header .navbar-top .contacts .contacts-left a {
   text-decoration: none;
@@ -100,7 +105,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   margin-top: 60px;
 }
 .jumbtron .navbar-bottom {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -132,7 +137,15 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 .jumbtron .navbar-bottom ul li a:hover {
   color: #41C457;
 }
-.jumbtron .navbar-bottom ul li:last-child {
+.jumbtron .navbar-bottom ul.menu {
+  display: none;
+}
+@media all and (min-width: 992px) {
+  .jumbtron .navbar-bottom ul.menu {
+    display: flex;
+  }
+}
+.jumbtron .navbar-bottom ul.menu li:last-child {
   background-color: #41C457;
   color: #ffffff;
   padding: 10px 20px;
@@ -140,11 +153,23 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-transform: uppercase;
   font-weight: 500;
 }
-.jumbtron .navbar-bottom ul li:last-child:hover {
+.jumbtron .navbar-bottom ul.menu li:last-child:hover {
   background-color: #5DE874;
   color: #ffffff;
 }
-.jumbtron .navbar-bottom ul li:last-child a:hover {
+.jumbtron .navbar-bottom ul.menu li:last-child a:hover {
+  color: #ffffff;
+}
+.jumbtron .navbar-bottom ul.hamburger {
+  display: flex;
+}
+@media all and (min-width: 992px) {
+  .jumbtron .navbar-bottom ul.hamburger {
+    display: none;
+  }
+}
+.jumbtron .navbar-bottom > a {
+  text-decoration: none;
   color: #ffffff;
 }
 .jumbtron .overlay {
@@ -228,6 +253,49 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #41C457;
 }
 
+.hamburger-menu {
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 3;
+  height: 100vh;
+  width: 500px;
+  max-width: 80vw;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right 0.5s linear;
+}
+.hamburger-menu i {
+  color: #1d2528;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.hamburger-menu i:hover {
+  color: #41C457;
+}
+.hamburger-menu ul {
+  list-style: none;
+}
+.hamburger-menu ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.hamburger-menu ul li a {
+  text-decoration: none;
+  color: #1d2528;
+  font-weight: bold;
+  font-size: 24px;
+}
+.hamburger-menu ul li a:hover {
+  color: #41C457;
+}
+
 .sign-in, .register {
   padding: 0 30px;
   position: fixed;
@@ -236,6 +304,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   z-index: 3;
   height: 100vh;
   width: 500px;
+  max-width: 80vw;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -292,7 +361,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 
 #video .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   padding: 100px;
@@ -361,7 +430,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   height: 480px;
 }
 #results .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -395,7 +464,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #000000;
 }
 #services .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -484,7 +553,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 
 #team .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -589,7 +658,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #e7eee9;
 }
 #news .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -685,7 +754,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   background-color: #000000;
 }
 #newsletter .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -733,7 +802,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 
 #form .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -862,7 +931,7 @@ footer .footer-links {
   background-repeat: no-repeat;
 }
 footer .footer-links .container {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -941,7 +1010,7 @@ footer .copyright-container {
   height: 60px;
 }
 footer .copyright-container .copyright {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   height: 100%;

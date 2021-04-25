@@ -1,3 +1,50 @@
+.hamburger-menu {
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 3;
+  height: 100vh;
+  width: 500px;
+  max-width: 80vw;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right 0.5s linear;
+
+  i {
+    color: $darkGrey;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 28px;
+    cursor: pointer;
+
+    &:hover {
+      color: $darkGreen;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      a {
+        @include a-style($darkGrey);
+        font-weight: bold;
+        font-size: 24px;
+
+        &:hover {
+          color: $darkGreen;
+        }
+      }
+    }
+  }
+}
+
 .sign-in, .register {
   padding: 0 30px;
   position: fixed;
@@ -6,6 +53,7 @@
   z-index: 3;
   height: 100vh;
   width: 500px;
+  max-width: 80vw;
   background-color: $white;
   display: flex;
   flex-direction: column;

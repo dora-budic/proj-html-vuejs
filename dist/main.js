@@ -68,14 +68,6 @@ var app = new Vue({
       name: 'blog',
       icon: '',
       url: '#news'
-    }, {
-      name: 'profile',
-      icon: 'far fa-user',
-      url: '#window'
-    }, {
-      name: 'get in touch',
-      icon: '',
-      url: '#form'
     }],
     jumbtron: [{
       img: 'bg-1.jpg',
@@ -215,58 +207,108 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
+    // Cambio jumbtron background e testo
     setInterval(function () {
       if (_this.currentIndex < _this.jumbtron.length - 1) {
         _this.currentIndex++;
       } else {
         _this.currentIndex = 0;
       }
-    }, 10000);
+    }, 10000); // Nascondo top nav, sposto bottom nav al scroll e al cambio viewport width
+
     var prevScrollpos = 0;
     var topNav = document.getElementsByClassName('navbar-top');
     var contact = document.getElementsByClassName('contacts');
     var jumbo = document.getElementsByClassName('jumbtron');
-    var bottomNav = document.getElementsByClassName('navbar-bottom');
+    var bottomNav = document.getElementsByClassName('navbar-bottom'); // Prendo oggetto media query
 
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
+    var widthCondition = window.matchMedia("(min-width: 992px)"); // Chiamo la funzione per l'effetto sulla nav e passo il parametro
 
-      if (prevScrollpos == currentScrollPos) {
-        contact[0].style.display = "flex";
+    fixedNav(widthCondition); // Fai partire la funzione al cambio dello stato
+
+    widthCondition.addListener(fixedNav);
+
+    function fixedNav(x) {
+      if (x.matches) {
+        var currentScrollPos = window.pageYOffset;
+        mobileStyle(currentScrollPos);
+
+        window.onscroll = function () {
+          var currentScrollPos = window.pageYOffset;
+          mobileStyle(currentScrollPos);
+        };
+      } else {
+        var _currentScrollPos = window.pageYOffset;
+        desktopStyle(_currentScrollPos);
+
+        window.onscroll = function () {
+          var currentScrollPos = window.pageYOffset;
+          desktopStyle(currentScrollPos);
+        };
+      }
+    } // Cambiamenti della nav nel desktop version
+
+
+    function desktopStyle(position) {
+      if (prevScrollpos == position) {
+        contact[0].style.display = "none";
         topNav[0].style.height = "60px";
-        jumbo[0].style.margin = "60px 0 0";
-        bottomNav[0].style.top = "80px";
+        topNav[0].style.display = "none";
+        bottomNav[0].style.top = "0";
+        jumbo[0].style.margin = "0";
       } else {
         contact[0].style.display = "none";
         topNav[0].style.height = "70px";
+        topNav[0].style.display = "flex";
+        bottomNav[0].style.top = "0";
         jumbo[0].style.margin = "0";
+      }
+    } // Cambiamenti della nav nel mobile/tablet version
+
+
+    function mobileStyle(position) {
+      if (prevScrollpos == position) {
+        topNav[0].style.display = "flex";
+        contact[0].style.display = "flex";
+        topNav[0].style.height = "60px";
+        bottomNav[0].style.top = "80px";
+      } else {
+        topNav[0].style.display = "flex";
+        contact[0].style.display = "none";
+        topNav[0].style.height = "70px";
         bottomNav[0].style.top = "0";
       }
-    };
+    }
   },
   methods: {
-    getName: function getName(object) {
-      if (object.icon != '') {
-        return '';
-      } else {
-        return object.name;
-      }
-    },
+    // Jumbtron slider
     changeJumbo: function changeJumbo(index) {
       this.currentIndex = index;
     },
-    showWindow: function showWindow(object) {
-      if (object.name == 'profile') {
+    // Slide in effect > sign in/menu window
+    showWindow: function showWindow(e) {
+      if (e.target.className == 'fas fa-bars') {
+        this.sideWindow = true;
+        document.getElementsByClassName('hamburger-menu')[0].style.right = '0';
+      } else {
         this.sideWindow = true;
         document.getElementsByClassName('sign-in')[0].style.right = '0';
       }
     },
+    // Slide out effect > sign in/register/menu window
     hideWindow: function hideWindow(e) {
-      this.sideWindow = false;
-      document.getElementsByClassName('sign-in')[0].style.right = '-500px';
-      this.registerWindow = false;
-      document.getElementsByClassName('register')[0].style.right = '-500px';
+      if (e.target.parentElement.className == 'sign-in') {
+        this.sideWindow = false;
+        document.getElementsByClassName('sign-in')[0].style.right = '-500px';
+      } else if (e.target.parentElement.className == 'register') {
+        this.registerWindow = false;
+        document.getElementsByClassName('register')[0].style.right = '-500px';
+      } else {
+        this.registerWindow = false;
+        document.getElementsByClassName('hamburger-menu')[0].style.right = '-500px';
+      }
     },
+    // Al click chiudo sign in window e faccio vedere register e viceversa
     changeWindow: function changeWindow(e) {
       var _this2 = this;
 

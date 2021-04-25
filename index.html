@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business Consulting</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./dist/master.css">
   </head>
@@ -38,17 +38,26 @@
         :style="`background-image:url('./dist/img/${jumbtron[currentIndex].img}')`">
           <div class="navbar-bottom">
             <a href="#"><img src="./dist/img/logo.svg" alt="nexgen logo"></a>
-            <ul class="list-inline">
+            <ul class="menu list-inline">
               <li v-for="link in navLinks">
                 <a :href="link.url">
-                  <i :class="link.icon" v-if="link.icon != ''"
-                    @click="showWindow(link)"
-                  ></i>
-                  {{getName(link)}}
+                  <i :class="link.icon"></i>
+                  {{link.name}}
                 </a>
               </li>
+              <li><a href="#window"><i class="far fa-user"
+                @click="showWindow(event)"></i></a></li>
+              <li><a href="#form">get in touch</a></li>
+            </ul>
+
+            <ul class="hamburger list-inline">
+              <li><a href="#window"><i class="far fa-user"
+                @click="showWindow(event)"></i></a></li>
+              <li><a href="#menu-window"><i class="fas fa-bars"
+                @click="showWindow(event)"></i></a></li>
             </ul>
           </div>
+
           <div class="overlay">
             <div class="jumbtron-text">
               <h1>{{jumbtron[currentIndex].title}}</h1>
@@ -64,6 +73,19 @@
                 @click="changeJumbo(icon-1)"></span>
             </div>
           </div>
+        </div>
+
+        <!-- Pop-up on right - menu -->
+        <div id="menu-window" class="hamburger-menu">
+          <i class="fas fa-arrow-right"
+          @click="hideWindow"></i>
+          <ul class="menu">
+            <li v-for="link in navLinks">
+              <a :href="link.url"  @click="hideWindow(event)">
+                {{link.name}}
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- Pop-up on right - account sign in -->

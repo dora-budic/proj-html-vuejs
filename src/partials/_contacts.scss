@@ -14,9 +14,13 @@ header {
     .contacts {
       @include container-center;
       color: $lightGrey;
-      display: flex;
+      display: none;
       justify-content: space-between;
       font-size: 14px;
+
+      @media all and (min-width: $breakpoint-md) {
+        display: flex;
+      }
 
       .contacts-left {
         a {
