@@ -121,14 +121,14 @@
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="pwd" placeholder="Password" required>
             <input type="password" name="pwd" placeholder="Confirm Password" required>
-            <input type="submit" name="signin" value="Register">
+            <input type="submit" name="register" value="Register">
           </form>
         </div>
       </header>
 
       <main>
         <!-- About section, text and video -->
-        <section id="video">
+        <section id="video" class="py-100">
           <div class="container">
             <div class="video-text">
               <span class="section-intro">introduction video</span>
@@ -352,9 +352,11 @@
               </div>
             </div>
             <div class="container-right">
-              <input type="text" name="name" placeholder="Name">
-              <input type="email" name="email" placeholder="Email">
-              <span><a href="#">subscribe</a></span>
+              <form>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="submit" name="subscribe" value="subscribe">
+              </form>
             </div>
           </div>
         </section>
@@ -385,7 +387,7 @@
                   </select>
                 </div>
                 <textarea name="message" rows="8" placeholder="Message"></textarea>
-                <input type="submit" name="submit" value="send">
+                <input type="submit" name="send" value="send">
               </form>
             </div>
             <div class="form-right">

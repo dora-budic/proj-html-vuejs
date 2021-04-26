@@ -4,6 +4,12 @@
   .container {
     @include container-center;
     .news-text {
+      text-align: center;
+
+      @media all and (min-width: $breakpoint-md) {
+        text-align: left;
+      }
+
       h1 {
         span:first-child {
           color: $darkGrey;
@@ -14,8 +20,22 @@
       }
       .description {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
+
+        @media all and (min-width: $breakpoint-md) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        p {
+          margin-bottom: 30px;
+        }
+
+        @media all and (min-width: $breakpoint-md) {
+          margin-bottom: 0;
+        }
+
         a {
           @include a-style($white);
           @include btn-green;
@@ -29,15 +49,44 @@
 
     .card-container {
       display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
+      flex-direction: column;
+
+      @media all and (min-width: $breakpoint-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @media all and (min-width: $breakpoint-md) {
+        flex-wrap: nowrap;
+      }
 
       .card {
-        width: calc(100% / 3 - 20px);
+        width: 100%;
         border-radius: 5px;
         overflow: hidden;
         display: flex;
         position: relative;
+        margin-top: 40px;
+
+        @media all and (min-width: $breakpoint-sm) {
+          width: calc(50% - 20px);
+        }
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 3 - 20px);
+        }
+
+        &:last-child {
+          @media all and (min-width: $breakpoint-sm) {
+            margin: 40px auto 0;
+          }
+
+          @media all and (min-width: $breakpoint-md) {
+            margin: 40px 0 0 0;
+          }
+
+        }
 
         img {
           width: 100%;
@@ -53,6 +102,7 @@
           background-color: rgba(0,0,0,0.5);
           @include card-pad;
           display: flex;
+          flex-direction: column;
 
           .card-top {
             color: $white;
@@ -67,7 +117,7 @@
 
           .card-bottom {
             text-align: center;
-            align-self: flex-end;
+            margin-top: auto;
             p.bottom {
               color: $white;
               font-size: 14px;

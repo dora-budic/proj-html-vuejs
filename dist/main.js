@@ -231,19 +231,19 @@ var app = new Vue({
     function fixedNav(x) {
       if (x.matches) {
         var currentScrollPos = window.pageYOffset;
-        mobileStyle(currentScrollPos);
-
-        window.onscroll = function () {
-          var currentScrollPos = window.pageYOffset;
-          mobileStyle(currentScrollPos);
-        };
-      } else {
-        var _currentScrollPos = window.pageYOffset;
-        desktopStyle(_currentScrollPos);
+        desktopStyle(currentScrollPos);
 
         window.onscroll = function () {
           var currentScrollPos = window.pageYOffset;
           desktopStyle(currentScrollPos);
+        };
+      } else {
+        var _currentScrollPos = window.pageYOffset;
+        mobileStyle(_currentScrollPos);
+
+        window.onscroll = function () {
+          var currentScrollPos = window.pageYOffset;
+          mobileStyle(currentScrollPos);
         };
       }
     } // Cambiamenti della nav nel desktop version
@@ -251,31 +251,31 @@ var app = new Vue({
 
     function desktopStyle(position) {
       if (prevScrollpos == position) {
-        contact[0].style.display = "none";
-        topNav[0].style.height = "60px";
-        topNav[0].style.display = "none";
-        bottomNav[0].style.top = "0";
-        jumbo[0].style.margin = "0";
-      } else {
-        contact[0].style.display = "none";
-        topNav[0].style.height = "70px";
         topNav[0].style.display = "flex";
+        topNav[0].style.height = "60px";
+        contact[0].style.display = "flex";
+        bottomNav[0].style.top = "80px";
+      } else {
+        topNav[0].style.display = "flex";
+        topNav[0].style.height = "70px";
+        contact[0].style.display = "none";
         bottomNav[0].style.top = "0";
-        jumbo[0].style.margin = "0";
       }
     } // Cambiamenti della nav nel mobile/tablet version
 
 
     function mobileStyle(position) {
       if (prevScrollpos == position) {
-        topNav[0].style.display = "flex";
-        contact[0].style.display = "flex";
         topNav[0].style.height = "60px";
-        bottomNav[0].style.top = "80px";
+        topNav[0].style.display = "none";
+        contact[0].style.display = "none";
+        jumbo[0].style.margin = "0";
+        bottomNav[0].style.top = "0";
       } else {
+        topNav[0].style.height = "70px";
         topNav[0].style.display = "flex";
         contact[0].style.display = "none";
-        topNav[0].style.height = "70px";
+        jumbo[0].style.margin = "0";
         bottomNav[0].style.top = "0";
       }
     }

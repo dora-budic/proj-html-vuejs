@@ -4,11 +4,27 @@
   .container {
     @include container-center;
     display: flex;
-    justify-content: space-between;
-    padding: 0 60px;
+    flex-direction: column;
+
+    @media all and (min-width: $breakpoint-sm) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media all and (min-width: $breakpoint-md) {
+      padding: 0 60px;
+    }
+
 
     .container-left {
-      width: calc(100% / 2 - 10px);
+      width: 100%;
+      text-align: center;
+
+      @media all and (min-width: $breakpoint-sm) {
+        width: calc(100% / 2 - 10px);
+        text-align: left;
+      }
+
       .newsletter-text {
         h1 {
           color: $white;
@@ -20,21 +36,35 @@
     }
 
     .container-right {
-      width: calc(100% / 2 - 10px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
 
-      input {
-        @include input-style($darkGrey);
+      @media all and (min-width: $breakpoint-sm) {
+        width: calc(100% / 2 - 10px);
+        margin-top: 0;
       }
 
-      a {
-        @include a-style($white);
-        @include btn-green;
+      form {
+        display: flex;
+        flex-direction: column;
 
-        &:hover {
-          background-color: $lightGreen;
+        input {
+          @include input-style($darkGrey);
+          margin-top: 20px;
+        }
+
+        input:last-child {
+          @include a-style($white);
+          @include btn-green;
+          align-self: center;
+
+          @media all and (min-width: $breakpoint-sm) {
+            align-self: flex-start;
+          }
+
+          &:hover {
+            background-color: $lightGreen;
+          }
         }
       }
     }

@@ -1,10 +1,10 @@
 #results {
   background-image: url('./img/bg-traffic.jpg');
   @include bg-image(center);
-  height: 480px;
 
   .container {
     @include container-center;
+
     .results-text {
       text-align: center;
       h1 {
@@ -17,11 +17,28 @@
 
     .stats {
       display: flex;
-      padding-top: 40px;
+      flex-direction: column;
+      align-items: center;
+
+      @media all and (min-width: $breakpoint-sm) {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
 
       & > div {
-        width: calc(100% / 4);
+        width: 100%;
         text-align: center;
+        margin-top: 30px;
+
+        @media all and (min-width: $breakpoint-sm) {
+          width: 50%;
+        }
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 4);
+        }
+
         h1 {
           color: $darkGreen;
           font-size: 30px;

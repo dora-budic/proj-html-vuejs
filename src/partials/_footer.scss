@@ -6,11 +6,25 @@ footer {
     .container {
       @include container-center;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       font-size: 14px;
 
+      @media all and (min-width: $breakpoint-md) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+
       & > div {
-        width: calc(100% / 4 - 20px);
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 4 - 20px);
+          margin-top: 0;
+          text-align: left;
+        }
       }
 
       .contact-info {
@@ -76,6 +90,11 @@ footer {
               @include a-style($lightGrey);
               i {
                 margin-right: 10px;
+                display: none;
+
+                @media all and (min-width: $breakpoint-md) {
+                  display: inline-block;
+                }
               }
             }
           }
@@ -86,18 +105,29 @@ footer {
 
   .copyright-container {
     background-color: $black;
-    height: 60px;
+    min-height: 60px;
+
+    @media all and (min-width: $breakpoint-md) {
+      display: flex;
+      align-items: center;
+    }
 
     .copyright {
       @include container-center;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;
+      padding: 10px 0;
+
+      @media all and (min-width: $breakpoint-md) {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0;
+      }
 
       p {
         font-size: 14px;
         color: $lightGrey;
+
         a {
           @include a-style($darkGreen);
         }

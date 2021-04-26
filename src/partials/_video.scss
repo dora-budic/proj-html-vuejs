@@ -1,7 +1,10 @@
 #video {
   .container {
     @include container-center;
-    padding: 100px;
+
+    @media all and (min-width: $breakpoint-md) {
+      padding: 100px;
+    }
 
     .video-text {
       text-align: center;

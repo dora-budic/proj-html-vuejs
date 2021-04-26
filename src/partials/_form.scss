@@ -2,11 +2,23 @@
   .container {
     @include container-center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @media all and (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .form-left {
-      width: calc(100% / 3 * 2);
-      padding-right: 30px;
+      width: 100%;
+      text-align: center;
+
+      @media all and (min-width: $breakpoint-md) {
+        width: calc(100% / 3 * 2);
+        padding-right: 30px;
+        text-align: left;
+      }
+
       .form-text {
         margin-bottom: 40px;
         h1 {
@@ -63,7 +75,14 @@
     }
 
     .form-right {
-      width: calc(100% / 3 - 20px);
+      width: 100%;
+      margin-top: 30px;
+
+      @media all and (min-width: $breakpoint-md) {
+        width: calc(100% / 3 - 20px);
+        margin-top: 0;
+      }
+
       p {
         margin-bottom: 20px;
       }

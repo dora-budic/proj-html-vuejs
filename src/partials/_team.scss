@@ -2,13 +2,28 @@
   .container {
     @include container-center;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+
+    @media all and (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
 
     .container-left {
-      width: calc(100% / 3 * 2);
+      width: 100%;
+
+      @media all and (min-width: $breakpoint-md) {
+        width: calc(100% / 3 * 2);
+      }
 
       .team-text {
+        text-align: center;
+
+        @media all and (min-width: $breakpoint-md) {
+          text-align: left;
+        }
+
         h1 {
           span:first-child {
             @include title-bg($darkGreen);
@@ -21,63 +36,68 @@
 
       .team-container {
         display: flex;
-        justify-content: space-between;
-      }
-
-      .team-members {
-        display: flex;
         flex-direction: column;
-        width: calc(100%/2 - 20px);
 
-        .team-member {
+        @media all and (min-width: $breakpoint-sm) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .team-members {
           display: flex;
-          align-items: center;
-          margin-top: 40px;
+          flex-direction: column;
+          width: 100%;
 
-          .image {
-            border-radius: 5px;
-            overflow: hidden;
-            display: flex;
-            img {
-              width: 110px;
-            }
+          @media all and (min-width: $breakpoint-sm) {
+            width: calc(50% - 10px);
           }
 
-          .member-info {
-            margin-left: 20px;
-            height: 100%;
+          .team-member {
             display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            margin-top: 40px;
 
-            p.subtitle {
-              color: $darkGrey;
+            .image {
+              img {
+                border-radius: 5px;
+                width: 110px;
+              }
             }
-            p.position {
-              text-transform: uppercase;
-              color: $lightGrey;
-              font-size: 14px;
-              font-weight: 500;
-            }
-            ul {
-              li {
-                margin-right: 5px;
-                background-color: rgba(65,196,87,0.2);
-                padding: 8px;
-                border-radius: 50%;
-                width: 35px;
-                @include display-center;
+
+            .member-info {
+              margin-left: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              p.subtitle {
+                color: $darkGrey;
+              }
+              p.position {
+                text-transform: uppercase;
+                color: $lightGrey;
+                font-size: 14px;
+                font-weight: 500;
+              }
+              ul {
+                li {
+                  margin-right: 5px;
+                  background-color: rgba(65,196,87,0.2);
+                  padding: 8px;
+                  border-radius: 50%;
+                  width: 35px;
+                  @include display-center;
 
 
-                a {
-                  @include a-style($darkGreen);
-                  display: flex;
-                }
-
-                &:hover {
-                  background-color: $darkGreen;
                   a {
-                    color: $white;
+                    @include a-style($darkGreen);
+                    display: flex;
+                  }
+
+                  &:hover {
+                    background-color: $darkGreen;
+                    a {
+                      color: $white;
+                    }
                   }
                 }
               }
@@ -88,10 +108,16 @@
     }
 
     .container-right {
-      width: calc(100% / 3 - 20px);
+      width: 100%;
       background-color: $darkGreen;
       padding: 30px 20px;
       border-radius: 5px;
+      margin-top: 30px;
+
+      @media all and (min-width: $breakpoint-md) {
+        width: calc(100% / 3 - 20px);
+        margin-top: 0;
+      }
 
       h3 {
         color: $white;

@@ -5,6 +5,12 @@
 
     .services-text {
       color: $white;
+      text-align: center;
+
+      @media all and (min-width: $breakpoint-md) {
+        text-align: left;
+      }
+
       & > h1 {
         span:last-child {
           @include title-bg($white);
@@ -12,11 +18,23 @@
       }
       .description {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
+
+        @media all and (min-width: $breakpoint-md) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
         p {
           width: 85%;
+          margin-bottom: 30px;
+
+          @media all and (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+          }
         }
+
         a {
           @include a-style($white);
           @include btn-transparent;
@@ -34,7 +52,7 @@
       margin-top: 40px;
 
       .card {
-        width: calc(100% / 3 - 20px);
+        width: 100%;
         margin-bottom: 20px;
         background-color: $overlay-bg;
         border-radius: 5px;
@@ -42,6 +60,15 @@
         cursor: pointer;
         position: relative;
         transition: all 0.3s ease;
+
+        @media all and (min-width: $breakpoint-sm) {
+          width: calc(50% - 20px);
+        }
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 3 - 20px);
+        }
+
 
         &:hover {
           position: relative;
