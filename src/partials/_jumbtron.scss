@@ -59,14 +59,11 @@
 
       &.hamburger {
         display: flex;
+        font-size: 20px;
         @media all and (min-width: $breakpoint-md) {
           display: none;
         }
       }
-    }
-
-    & > a {
-      @include a-style($white);
     }
   }
 
@@ -88,7 +85,6 @@
     }
 
     .jumbtron-text {
-      transition: all 0.8s linear;
 
       @media all and (min-width: $breakpoint-md) {
         text-align: center;
@@ -109,12 +105,17 @@
         }
       }
       p {
-        font-size: 18px;
+        font-size: 16px;
         color: $lightGrey;
         font-weight: 500;
         margin-top: 30px;
         margin-bottom: 40px;
       }
+
+      @media all and (min-width: $breakpoint-sm) {
+        font-size: 18px;
+      }
+
       ul {
         flex-direction: column;
 
@@ -127,11 +128,11 @@
         }
 
         li {
-          width: 160px;
+          align-self: flex-start;
           margin: 10px 0;
 
           @media all and (min-width: $breakpoint-sm) {
-            width: inherit;
+            align-self: auto;
           }
 
           a {

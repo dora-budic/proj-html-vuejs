@@ -30,10 +30,10 @@
 
         p {
           margin-bottom: 30px;
-        }
 
-        @media all and (min-width: $breakpoint-md) {
-          margin-bottom: 0;
+          @media all and (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+          }
         }
 
         a {
@@ -118,7 +118,7 @@
           a {
             @include a-style($white);
             margin-top: auto;
-            
+
             .card-bottom {
               text-align: center;
               p.bottom {

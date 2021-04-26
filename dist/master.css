@@ -184,15 +184,12 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 }
 .jumbtron .navbar-bottom ul.hamburger {
   display: flex;
+  font-size: 20px;
 }
 @media all and (min-width: 992px) {
   .jumbtron .navbar-bottom ul.hamburger {
     display: none;
   }
-}
-.jumbtron .navbar-bottom > a {
-  text-decoration: none;
-  color: #ffffff;
 }
 .jumbtron .overlay {
   width: 100%;
@@ -214,9 +211,6 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
     padding-left: 0;
     padding-right: 0;
   }
-}
-.jumbtron .overlay .jumbtron-text {
-  transition: all 0.8s linear;
 }
 @media all and (min-width: 992px) {
   .jumbtron .overlay .jumbtron-text {
@@ -240,11 +234,16 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   }
 }
 .jumbtron .overlay .jumbtron-text p {
-  font-size: 18px;
+  font-size: 16px;
   color: #bcbdbd;
   font-weight: 500;
   margin-top: 30px;
   margin-bottom: 40px;
+}
+@media all and (min-width: 768px) {
+  .jumbtron .overlay .jumbtron-text {
+    font-size: 18px;
+  }
 }
 .jumbtron .overlay .jumbtron-text ul {
   flex-direction: column;
@@ -260,12 +259,12 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   }
 }
 .jumbtron .overlay .jumbtron-text ul li {
-  width: 160px;
+  align-self: flex-start;
   margin: 10px 0;
 }
 @media all and (min-width: 768px) {
   .jumbtron .overlay .jumbtron-text ul li {
-    width: inherit;
+    align-self: auto;
   }
 }
 .jumbtron .overlay .jumbtron-text ul li a {
@@ -857,7 +856,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   margin-bottom: 30px;
 }
 @media all and (min-width: 992px) {
-  #news .container .news-text .description {
+  #news .container .news-text .description p {
     margin-bottom: 0;
   }
 }
