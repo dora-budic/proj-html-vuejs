@@ -764,15 +764,15 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 @media all and (min-width: 992px) {
   #team .container .container-right {
     width: calc(100% / 3 - 20px);
-    margin-top: 0;
+    margin-top: auto;
   }
 }
 #team .container .container-right h3 {
   color: #ffffff;
 }
 #team .container .container-right p {
-  margin: 20px 0;
   color: rgba(255, 255, 255, 0.8);
+  margin: 30px 0;
 }
 #team .container .container-right h4 {
   color: rgba(255, 255, 255, 0.8);
