@@ -96,7 +96,9 @@
     input[type="submit"] {
       @include a-style($white);
       @include btn-green;
-      width: 125px;
+      align-self: flex-start;
+      cursor: pointer;      
+
       &:hover {
         background-color: $lightGreen;
       }

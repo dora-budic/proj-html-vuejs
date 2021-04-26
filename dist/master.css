@@ -404,7 +404,8 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 500;
-  width: 125px;
+  align-self: flex-start;
+  cursor: pointer;
 }
 .sign-in form input[type=submit]:hover, .register form input[type=submit]:hover {
   background-color: #5DE874;
@@ -909,12 +910,15 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #news .container .card-container .card .card-text .card-top i {
   margin-right: 5px;
 }
-#news .container .card-container .card .card-text .card-bottom {
-  text-align: center;
+#news .container .card-container .card .card-text a {
+  text-decoration: none;
+  color: #ffffff;
   margin-top: auto;
 }
-#news .container .card-container .card .card-text .card-bottom p.bottom {
-  color: #ffffff;
+#news .container .card-container .card .card-text a .card-bottom {
+  text-align: center;
+}
+#news .container .card-container .card .card-text a .card-bottom p.bottom {
   font-size: 14px;
   margin-top: 10px;
   display: none;
@@ -998,7 +1002,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   font-size: 16px;
   margin-top: 20px;
 }
-#newsletter .container .container-right form input:last-child {
+#newsletter .container .container-right form input[type=submit] {
   text-decoration: none;
   color: #ffffff;
   background-color: #41C457;
@@ -1008,13 +1012,14 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   text-transform: uppercase;
   font-weight: 500;
   align-self: center;
+  cursor: pointer;
 }
 @media all and (min-width: 768px) {
-  #newsletter .container .container-right form input:last-child {
+  #newsletter .container .container-right form input[type=submit] {
     align-self: flex-start;
   }
 }
-#newsletter .container .container-right form input:last-child:hover {
+#newsletter .container .container-right form input[type=submit]:hover {
   background-color: #5DE874;
 }
 
@@ -1106,6 +1111,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 500;
+  cursor: pointer;
 }
 #form .container .form-left form input[type=submit]:hover {
   background-color: #5DE874;

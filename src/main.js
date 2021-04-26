@@ -150,21 +150,24 @@ var app = new Vue ({
         author: 'Andrea Miller',
         time: '2 Days Ago',
         title: 'Increasing creativity is possible for everyone',
-        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        link: '#',
       },
       {
         img: 'news-2.jpg',
         author: 'John Smith',
         time: '9 Days Ago',
         title: 'Because market research is part of the business plan',
-        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        link: '#',
       },
       {
         img: 'news-3.jpg',
         author: 'Andrea Miller',
         time: '16 Days Ago',
         title: 'Working from home is now a trend',
-        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        link: '#',
       },
     ],
     aboutList: [

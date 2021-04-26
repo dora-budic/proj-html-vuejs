@@ -53,10 +53,11 @@
           margin-top: 20px;
         }
 
-        input:last-child {
+        input[type="submit"] {
           @include a-style($white);
           @include btn-green;
           align-self: center;
+          cursor: pointer;
 
           @media all and (min-width: $breakpoint-sm) {
             align-self: flex-start;

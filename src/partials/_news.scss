@@ -115,14 +115,17 @@
             }
           }
 
-          .card-bottom {
-            text-align: center;
+          a {
+            @include a-style($white);
             margin-top: auto;
-            p.bottom {
-              color: $white;
-              font-size: 14px;
-              margin-top: 10px;
-              display: none;
+            
+            .card-bottom {
+              text-align: center;
+              p.bottom {
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+              }
             }
           }
         }

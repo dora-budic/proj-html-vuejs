@@ -328,10 +328,12 @@
                     <span><i class="far fa-user"></i>{{article.author}}</span>
                     <span><i class="fas fa-clock"></i>{{article.time}}</span>
                   </div>
-                  <div class="card-bottom">
-                    <p class="subtitle">{{article.title}}</p>
-                    <p class="bottom">{{article.about}}</p>
-                  </div>
+                  <a :href="article.link">
+                    <div class="card-bottom">
+                      <p class="subtitle">{{article.title}}</p>
+                      <p class="bottom">{{article.about}}</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -395,7 +397,7 @@
               <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <p class="p-font">Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
               <ul>
-                <li v-for="contact in contacts.slice(0,3)">
+                <li v-for="(contact,i) in contacts" v-if="i < 3">
                   <a :href="contact.url">
                     <i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>
                     {{contact.text}}
@@ -416,7 +418,7 @@
               <img src="./dist/img/logo.svg" alt="nexgen logo">
               <p>A Functional HTML Template for Corporate &amp; Business.</p>
               <ul>
-                <li v-for="contact in contacts.slice(0,3)">
+                <li v-for="(contact,i) in contacts" v-if="i < 3">
                   <a :href="contact.url">
                     <i :class="`${contact.family} ${contact.prefix}${contact.type}`"></i>
                     {{contact.text}}
