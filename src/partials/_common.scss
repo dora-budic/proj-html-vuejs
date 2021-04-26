@@ -4,15 +4,23 @@
 }
 
 .title-style {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 900;
   margin-top: 30px;
   margin-bottom: 30px;
+
+  @media all and (min-width: $breakpoint-sm) {
+    font-size: 42px;
+  }
 }
 
 .p-font {
-  font-size: 16px;
+  font-size: 14px;
   color: $midGrey;
+
+  @media all and (min-width: $breakpoint-sm) {
+    font-size: 16px;
+  }
 }
 
 .subtitle {
@@ -28,7 +36,17 @@
   font-weight: bold;
 }
 
-.py-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.py-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media all and (min-width: $breakpoint-sm) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  @media all and (min-width: $breakpoint-md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }

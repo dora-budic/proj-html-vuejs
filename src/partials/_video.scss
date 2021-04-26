@@ -25,11 +25,19 @@
       a {
         background-color: $darkGreen;
         display: flex;
-        font-size: 70px;
+        font-size: 25px;
         @include a-style($white);
         position: relative;
         border-radius: 5px;
         overflow: hidden;
+
+        @media all and (min-width: $breakpoint-sm) {
+          font-size: 58px;
+        }
+
+        @media all and (min-width: $breakpoint-sm) {
+          font-size: 70px;
+        }
 
         &:hover {
           i:first-child {

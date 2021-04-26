@@ -9,25 +9,33 @@ footer {
       flex-direction: column;
       font-size: 14px;
 
-      @media all and (min-width: $breakpoint-md) {
+      @media all and (min-width: $breakpoint-sm) {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
       }
 
+      @media all and (min-width: $breakpoint-md) {
+        flex-wrap: nowrap;
+      }
 
       & > div {
-        width: 100%;
         margin-top: 30px;
         text-align: center;
 
         @media all and (min-width: $breakpoint-md) {
-          width: calc(100% / 4 - 20px);
           margin-top: 0;
           text-align: left;
         }
       }
 
       .contact-info {
+        width: 100%;
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 4 - 20px);
+        }
+
         img {
           width: 110px;
         }
@@ -66,6 +74,17 @@ footer {
       }
 
       .footer-list {
+        width: 100%;
+
+        @media all and (min-width: $breakpoint-sm) {
+          width: calc(100% / 3 - 20px);
+        }
+
+
+        @media all and (min-width: $breakpoint-md) {
+          width: calc(100% / 4 - 20px);
+        }
+
         @include card-pad;
         background-color: rgba(255,255,255255,0.05);
         transition: all 0.3s ease;

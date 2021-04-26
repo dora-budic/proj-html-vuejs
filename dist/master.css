@@ -16,15 +16,25 @@ body {
 }
 
 .title-style {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 900;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media all and (min-width: 768px) {
+  .title-style {
+    font-size: 42px;
+  }
+}
 
 .p-font {
-  font-size: 16px;
+  font-size: 14px;
   color: #626165;
+}
+@media all and (min-width: 768px) {
+  .p-font {
+    font-size: 16px;
+  }
 }
 
 .subtitle {
@@ -40,9 +50,21 @@ body {
   font-weight: bold;
 }
 
-.py-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.py-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media all and (min-width: 768px) {
+  .py-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+@media all and (min-width: 992px) {
+  .py-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 header .navbar-top {
@@ -203,7 +225,7 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
   }
 }
 .jumbtron .overlay .jumbtron-text h1 {
-  font-size: 42px;
+  font-size: 38px;
   color: #ffffff;
   font-weight: 900;
 }
@@ -439,12 +461,22 @@ header .navbar-top .contacts .contacts-right ul li a:hover {
 #video .container .video-image a {
   background-color: #41C457;
   display: flex;
-  font-size: 70px;
+  font-size: 25px;
   text-decoration: none;
   color: #ffffff;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+}
+@media all and (min-width: 768px) {
+  #video .container .video-image a {
+    font-size: 58px;
+  }
+}
+@media all and (min-width: 768px) {
+  #video .container .video-image a {
+    font-size: 70px;
+  }
 }
 #video .container .video-image a:hover i:first-child {
   opacity: 1;
@@ -1181,22 +1213,34 @@ footer .footer-links .container {
   flex-direction: column;
   font-size: 14px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   footer .footer-links .container {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
+@media all and (min-width: 992px) {
+  footer .footer-links .container {
+    flex-wrap: nowrap;
+  }
+}
 footer .footer-links .container > div {
-  width: 100%;
   margin-top: 30px;
   text-align: center;
 }
 @media all and (min-width: 992px) {
   footer .footer-links .container > div {
-    width: calc(100% / 4 - 20px);
     margin-top: 0;
     text-align: left;
+  }
+}
+footer .footer-links .container .contact-info {
+  width: 100%;
+}
+@media all and (min-width: 992px) {
+  footer .footer-links .container .contact-info {
+    width: calc(100% / 4 - 20px);
   }
 }
 footer .footer-links .container .contact-info img {
@@ -1238,9 +1282,20 @@ footer .footer-links .container .contact-info > a:hover {
   color: #ffffff;
 }
 footer .footer-links .container .footer-list {
+  width: 100%;
   padding: 40px 30px;
   background-color: rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
+}
+@media all and (min-width: 768px) {
+  footer .footer-links .container .footer-list {
+    width: calc(100% / 3 - 20px);
+  }
+}
+@media all and (min-width: 992px) {
+  footer .footer-links .container .footer-list {
+    width: calc(100% / 4 - 20px);
+  }
 }
 footer .footer-links .container .footer-list:hover {
   position: relative;
