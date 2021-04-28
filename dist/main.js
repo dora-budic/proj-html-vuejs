@@ -50,23 +50,18 @@ var app = new Vue({
     }],
     navLinks: [{
       name: 'home',
-      icon: '',
       url: '#'
     }, {
       name: 'about',
-      icon: '',
       url: '#video'
     }, {
       name: 'services',
-      icon: '',
       url: '#services'
     }, {
       name: 'team',
-      icon: '',
       url: '#team'
     }, {
       name: 'blog',
-      icon: '',
       url: '#news'
     }],
     jumbtron: [{
@@ -229,7 +224,7 @@ var app = new Vue({
 
     fixedNav(widthCondition); // Fai partire la funzione al cambio dello stato
 
-    widthCondition.addListener(fixedNav);
+    widthCondition.addEventListener('change', fixedNav);
 
     function fixedNav(x) {
       if (x.matches) {
